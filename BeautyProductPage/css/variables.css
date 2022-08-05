@@ -1,0 +1,20 @@
+:root {
+  --white-smoke: rgb(246, 246, 246);
+  --dark-purple: rgb(65, 75, 169);
+  --light-purple: rgb(144, 109, 216);
+  --mint: rgb(58, 189, 152);
+  --blue: rgb(67, 115, 174);
+  --navy-blue: rgb(13, 80, 116);
+  --orange: rgb(251, 52, 3);
+  --carrot-orange: rgb(252, 94, 59);
+  --light-blue: rgb(68, 163, 206);
+  --message-yellow: rgb(238, 227, 12);
+  --logo-yellow: rgb(247, 224, 29);
+  --circle-yellow: rgb(246, 230, 6);
+  --carbon-black: rgb(31, 37, 46);
+  --grey: grey;
+  --light-grey: rgb(237, 237, 237);
+  --spring-image: url("../images/spring-image2.jpg") no-repeat;
+  --arrow-image: url("../images/arrow-image.jpg") no-repeat;
+  --model-image: url("../images/model-image.jpg") no-repeat;
+}
