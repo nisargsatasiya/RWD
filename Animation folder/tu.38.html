@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry lion online food service</title>
+
+
+    <link rel="stylesheet" href="phone.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    </style>
+    <style>
+        #navbar ul li {
+            color: blanchedalmond;
+            list-style: none;
+            margin: auto;
+            padding: auto;
+        }
+
+        #logo {
+            height: 10px;
+            width: 10px;
+        }
+
+        #logo img {
+            height: 10px;
+            margin: 20px 20px;
+        }
+
+        #navbar ul li a {
+            border-radius: 90px;
+            display: flex;
+            padding: 30px;
+            color: blanchedalmond;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: whitesmoke;
+            background-color: blueviolet;
+            height: 40px;
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+            opacity: 0.6;
+
+        }
+
+        #navbar {
+            position: sticky;
+            display: flex;
+            align-items: center;
+            font-family: 'Kaushan Script', cursive;
+            color: whitesmoke;
+            top: 0px;
+            font-size: 1.2rem;
+            background-color: black;
+            font-size: 1.0rem;
+            font-weight: bolder;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        #navbar ul {
+            display: flex;
+            padding: 1px;
+            margin: -5px;
+            list-style: none;
+            opacity: 0.6;
+        }
+
+        img {
+            margin: -1px;
+            padding: 0px;
+            height: 5px;
+            width: 5px;
+
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            color: blanchedalmond;
+            font-family: 'Kaushan Script', cursive;
+            /* background-color: black; */
+        }
+
+        #home::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.9;
+            background: url(vegetables-set-left-black-slate.jpg) no-repeat center center/cover;
+            top: 0px;
+            left: 0px;
+
+
+
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+
+        }
+
+        #home h1 {
+            text-align: center;
+            color: white;
+        }
+
+        #home p {
+            color: white;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .h-primary {
+            font-size: 1.1rem;
+            padding: 7rem;
+            font-family: 'Kaushan Script', cursive;
+
+        }
+
+        .h-secondry {
+            font-size: 1.5rem;
+            padding: 12px;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 5px solid black;
+            border-radius: 50px;
+            font-weight: bolder;
+            background-color: blueviolet;
+            color: blanchedalmond;
+            font-family: 'Kaushan Script', cursive;
+            cursor: pointer;
+            margin: 27px;
+            align-items: center;
+            display: flex;
+        }
+
+
+
+        .center {
+            text-align: center;
+        }
+
+        #services {
+            margin: 40px;
+            display: flex;
+        }
+
+        #services .box {
+            border: 6px solid darkblue;
+            margin: 4px 8px;
+            padding: 34px;
+            border-radius: 35px;
+            background: darkgoldenrod;
+
+        }
+
+        #services .box img {
+            height: 150px;
+            width: 150px;
+            margin: auto;
+            display: flex;
+
+        }
+
+        #services .box p {
+            font-family: 'Kaushan Script', cursive;
+            font-weight: bold;
+        }
+
+        #services {}
+
+        #services {}
+
+        #services {}
+
+        #client-section {
+
+
+
+            height: 444px;
+        }
+
+        #client-section::before {}
+
+        body {
+            background: url(pexels-pixabay-372882.jpg);
+            height: 100%;
+            width: 100%;
+            /* z-index: -1; */
+            /* opacity: 0.4; */
+            content: "";
+            /* position: absolute; */
+            color: antiquewhite;
+            font-family: 'Kaushan Script', cursive;
+
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #client img {
+            height: 144px;
+        }
+
+        .client-item {
+            padding: 40px;
+        }
+
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+            background: url(contact-details-3381225.jpg)no-repeat center center/cover;
+        }
+
+        footer {
+            color: blanchedalmond;
+            padding: 5px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: x-large;
+        }
+
+        #name {
+            color: black;
+
+            padding: 5px;
+        }
+
+        #contact-box {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-bottom: 40px;
+
+        }
+
+        #contact-box form {
+            width: auto;
+        }
+
+        #contact-box label {
+            width: auto;
+            font-size: 1.5rem;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 40px;
+            font-size: large;
+            font-family: 'Kaushan Script', cursive;
+            border: 8px solid black;
+            background-color: lightblue;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="logo">
+            <img src="lion food-removebg-preview.jpg" alt="Lion Food">
+        </div>
+        <ul>
+            <li class="item">
+                <a href="#home">HOME</a>
+            </li>
+            <li class="item"><a href="#services-container">SERVICES</a></li>
+            <li class="item"><a href="#cleint-section">ABOUT-US</a></li>
+            <li class="item"><a href="#contact">CONTACT-US</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">
+            WELCOME TO HUNGRY LION ONLINE FOOD SERVICES LTD.
+        </h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit.
+
+        <button class="btn">
+            ORDER NOW
+        </button>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">OUR SERVICES</h1>
+        <div id="services">
+            <div class="box">
+                <img src="pexels-devon-rockola-954677.jpg" alt="">
+                <h2 class="h-secondry center">FOOD CATRING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quas beatae incidunt
+                    quaerat accusamus debitis laudantium unde pariatur magni officiis.</P>
+            </div>
+            <div class="box">
+                <img src="pexels-edward-eyer-1049626.jpg"">
+                <h2 class=" h-secondry center">BULK ORDRING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quas beatae incidunt
+                    quaerat accusamus debitis laudantium unde pariatur magni officiis.</P>
+            </div>
+            <div class="box">
+                <img src="Delivery Man Riding Scooter On Android Tablet With City Location Map Safe Delivery Vector Illustration, Scooter Clipart, Flower Delivery, Covid19 PNG and Vector with Transparent Background for Free Download.jpeg"
+                    alt="">
+                <h2 class="h-secondry center">FOOD ORDRING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quas beatae incidunt
+                    quaerat accusamus debitis laudantium unde pariatur magni officiis.</P>
+            </div>
+
+        </div>
+    </section>
+    <section id="cleint-section">
+        <h1 class="h-prymary center">OUR CLIENTS</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="WallpaperDog-11007009.jpg" alt="OUR CLIENT">
+            </div>
+            <div class="client-item">
+                <img src="wp6810852-microsoft-logo-desktop-wallpapers.png" alt="OUR CLIENT">
+            </div>
+            <div class="client-item">
+                <img src="Screenshot 2022-07-09 180023.png" alt="OUR CLIENT">
+            </div>
+            <div class="client-item">
+                <img src="Screenshot 2022-07-09 180347.png" alt="OUR CLIENT">
+            </div>
+            <div class="client-item">
+                <img src="Screenshot 2022-07-11 162218.png" alt="OUR CLIENT">
+            </div>
+        </div>
+        </h1>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">
+            CONTACT-US
+        </h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="E-mail Address">E-mail: </label>
+                    <input type="E-mail Address" name="E-mail Address" id="E-mail Address"
+                        placeholder="Enter Your E-mail Address">
+                </div>
+                <div class="form-group">
+                    <label for="Contact Number">Contact Number: </label>
+                    <input type="Contact Number" name="Contact Number" id="Contact Number"
+                        placeholder="Enter Your Contact Number">
+                </div>
+                <div class="form-group">
+                    <label for="message">message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="class">
+            copyright &copy;www.Hungrylionfood.com _All Right Reserved
+        </div>
+    </footer>
+</body>
+
+</html>
