@@ -1,34 +1,18 @@
 @media only screen and (max-width: 768px) {
   /* -----------------------------------------------------------nav-------------------------------------- */
-  nav {
-    width: 100%;
-    background-color: var(--white);
-    height: 64px;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 1;
-  }
-  .logo {
-    display: flex;
-    justify-content: space-between;
-  }
-  .navbar ul {
-    /* visibility: hidden; */
-    display: none;
-  }
   .fa-bars {
-    display: flex;
-    align-items: center;
+    display: block;
     font-size: 30px;
     color: var(--blue);
   }
   .nav-button-Get-in-touch {
   }
+  .navbar-ul {
+    display: none;
+  }
   /* -------------------------------------------------------hero-header---------------------------------------------- */
   .hero-header {
-    padding: 110px;
+    padding: 150px 109px 0px;
   }
   .hero-header-title {
     font-size: 39px;
@@ -42,113 +26,24 @@
   .hero-photo-section {
     margin-left: 0px;
   }
-  .image-wrappar-1-hero:hover {
-    filter: grayscale(100%);
-  }
-
-  .image-wrappar-1-hero:after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%);
-    margin-top: -150px;
-    height: 200px;
-    width: 100%;
-    content: "";
-  }
-
   .hero-photo-section-image-no-1 {
     height: 300px;
-    width: 150px;
-    border-radius: 20px;
-    object-fit: cover;
-    cursor: pointer;
-    background-color: linear-gradient(red, yellow);
-  }
-  .hero-photo-section-image-no-1:hover {
-    animation-name: image1;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
+    width: 166px;
   }
 
-  .image-wrappar-2-hero:after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%);
-    margin-top: -150px;
-    height: 200px;
-    width: 100%;
-    content: "";
-  }
-  .image-wrappar-2-hero:hover {
-    filter: grayscale(100%);
-  }
   .hero-photo-section-image-no-2 {
     height: 300px;
-    width: 150px;
-    border-radius: 20px;
-    margin-top: 150px;
-    margin-left: 20px;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  .hero-photo-section-image-no-2:hover {
-    animation-name: image2;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
+    width: 166px;
   }
 
-  .image-wrappar-3-hero:after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%);
-    margin-top: -150px;
-    height: 200px;
-    width: 100%;
-    content: "";
-  }
-  .image-wrappar-3-hero:hover {
-    filter: grayscale(100%);
-  }
   .hero-photo-section-image-no-3 {
     height: 300px;
-    width: 150px;
-    border-radius: 20px;
-    margin-left: 20px;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  .hero-photo-section-image-no-3:hover {
-    animation-name: image3;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-  }
-
-  .image-wrappar-4-hero:after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%);
-    margin-top: -150px;
-    height: 200px;
-    width: 100%;
-    content: "";
-  }
-  .image-wrappar-4-hero:hover {
-    filter: grayscale(100%);
+    width: 166px;
   }
 
   .hero-photo-section-image-no-4 {
     height: 300px;
-    width: 150px;
-    border-radius: 20px;
-    margin-top: 150px;
-    margin-left: 20px;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  .hero-photo-section-image-no-4:hover {
-    animation-name: image4;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
+    width: 166px;
   }
 
   /* ------------------------------------------------Digital-marketing-section-----------------------------------------*/
@@ -157,6 +52,16 @@
     margin-top: 0px;
     padding-left: 15px;
   }
+  .Digital-marketing-Branding-text {
+    margin: 0px;
+    font-size: 0px;
+  }
+
+  .Digital-marketing-Social-Ads-text {
+    margin: 0px;
+    font-size: 0px;
+  }
+
   /* ------------------------------------------------------------------------------------------------------------------------------------------- */
   .Digital-marketing-containers-wrapper {
     display: flex;
@@ -169,29 +74,17 @@
   }
 
   .Earning-traffic-sub-title {
-    font-size: 15px;
-    color: var(--dark-grey);
     width: 198px;
-    line-height: 25px;
-    animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
   .Designs-that-dazzels-sub-title {
-    font-size: 15px;
-    color: var(--dark-grey);
     width: 198px;
-    line-height: 25px;
-    animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
   .Designs-that-dazzels-container {
     flex-direction: column;
     margin-top: 50px;
   }
   .Expand-your-social-reach-sub-title {
-    font-size: 15px;
-    color: var(--dark-grey);
     width: 198px;
-    line-height: 25px;
-    animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
   .Expand-your-social-reach-container {
     display: flex;
@@ -213,6 +106,7 @@
     border-radius: 40px;
   }
   .sponsership-logo {
+    margin-top: 100px;
     gap: 100px;
   }
 
@@ -224,8 +118,8 @@
     padding-top: 75px;
   }
   .metting-room-image {
-    height: 400px;
-    width: 300px;
+    height: 425px;
+    width: 325px;
     object-fit: cover;
     border-radius: 25px;
   }
@@ -233,27 +127,32 @@
     padding-left: 50px;
   }
   .check-icon-text-no-1 {
-    gap: 20px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
+    font-weight: 600;
+    color: var(--black);
   }
   .check-icon-text-no-2 {
-    gap: 20px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
+    font-weight: 600;
+    color: var(--black);
   }
   .check-icon-text-no-3 {
-    gap: 20px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
+    font-weight: 600;
+    color: var(--black);
   }
   .check-icon-text-no-4 {
-    gap: 20px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
+    font-weight: 600;
+    width: 310px;
+    color: var(--black);
   }
   .Send-Me-a-Proposal-📄-button {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .How-growth-business-container-trofy-and-like-container {
     padding-left: 0px;
@@ -273,16 +172,18 @@
     padding-left: 0px;
     flex: 1;
     width: 0px;
-    font-size: 36px;
+    font-size: 31px;
   }
   .by-the-number-section-no-3-introduction-para {
-    width: 300px;
+    width: 255px;
+    margin-left: 75px;
   }
   .by-the-number-section-no-3-introduction {
     padding-left: 0px;
   }
   .by-the-number-section-no-3-send-me-proposal-button {
     margin-top: 20px;
+    margin-left: 75px;
   }
   /* ------------------------------------------------footer---------------------------------------------- */
   .digital-marketing-footer ul {
@@ -304,6 +205,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px;
+    padding: 0px;
   }
   .footer-ul-li-wrapper {
     margin-top: 30px;
@@ -317,5 +220,15 @@
   .Creative-footer {
     height: 0px;
     margin: 0;
+  }
+  .footer-hr {
+    margin-top: 0px;
+    width: 0px;
+    background-color: var(--dark-grey);
+    height: 0px;
+    border: 0;
+  }
+  .footer-icon {
+    margin: 0px;
   }
 }

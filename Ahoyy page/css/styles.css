@@ -40,12 +40,14 @@ nav {
   border-bottom: 1px solid var(--gray);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.logo p{
+  display: inline;
+  /* display: flex;
+  align-items: center; */
 }
 .fa-bars {
   display: flex;
+  display: none;
   align-items: center;
   font-size: 30px;
 }
@@ -74,21 +76,15 @@ nav {
   font-weight: 600;
   font-size: 22px;
 }
-.navbar {
-}
-
-.navbar ul {
+.navbar-ul ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   list-style: none;
   font-weight: 600;
   font-size: 15px;
   color: var(--dark-grey);
-  padding-left: 10px;
-  margin: 0;
+  padding: 0 5px;
+  /* display: none; */
 }
-
 .navbar li:hover {
   color: var(--black);
   font-weight: 600;
@@ -940,7 +936,7 @@ nav {
 }
 
 .How-growth-business-container {
-  /* display: flex; */
+  display: flex;
   flex-direction: row;
   padding-left: 110px;
   margin-top: 110px;
