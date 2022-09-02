@@ -48,11 +48,8 @@ nav {
   /* display: flex;
   align-items: center; */
 }
-.fa-bars {
-  display: flex;
+.hamburger-icon {
   display: none;
-  align-items: center;
-  font-size: 30px;
 }
 .fa-snowflake-o {
   border-radius: 50%;
@@ -85,7 +82,7 @@ nav {
   font-weight: 600;
   font-size: 15px;
   color: var(--dark-grey);
-  padding: 0 5px;
+  /* padding: 0 15px; */
   /* display: none; */
 }
 .navbar li:hover {
@@ -94,7 +91,7 @@ nav {
 }
 
 .navbar li {
-  margin: 15px;
+  /* margin: 15px; */
 }
 
 .nav-button-Get-in-touch {
@@ -138,11 +135,11 @@ nav {
 /* ---------------------------------------------------------hero-header---------------------------------------------- */
 
 .hero-header {
-  /* padding: 150px; */
+  padding: 150px 100px 0;
 }
 
 .hero-header-title {
-  font-size: 61px;
+  font-size: 64px;
   font-weight: 600;
   margin: 0;
 }
@@ -568,6 +565,7 @@ nav {
 
 .Expand-your-social-reach-container {
   flex: 1;
+  margin-top: 50px;
 }
 
 .rocket-emoji {
@@ -640,12 +638,10 @@ nav {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  /* padding: 120px 0px 0px 98px; */
+  padding: 111px 0px 0px 10px;
   font-size: 45px;
-  /* width: 440px; */
-  /* height: 280px; */
+
   gap: 80px;
-  /* row-gap: 20px; */
 }
 
 .fa-apple {
@@ -739,7 +735,7 @@ nav {
   }
 }
 .fa-snapchat {
-  color: #fffc00;
+  color: #000000;
   cursor: pointer;
   height: 45px;
 }
@@ -1055,7 +1051,7 @@ nav {
 /* ------------------------------------------------------How-growth-business-container-trofy-and-like-container---------------------------------------------- */
 
 .How-growth-business-container-trofy-and-like-container {
-  /* display: flex; */
+  display: flex;
   margin-top: 100px;
   padding-left: 120px;
 }

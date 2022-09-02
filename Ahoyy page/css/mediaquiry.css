@@ -11,6 +11,9 @@
   .navbar-ul {
     display: none;
   }
+  .hamburger-icon {
+    display: block;
+  }
   /* -------------------------------------------------------hero-header---------------------------------------------- */
   .hero-header {
     padding: 150px 117px 0px;
@@ -60,6 +63,9 @@
   .Digital-marketing-containers-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 20px;
   }
 
   .earning-traffic-container {
@@ -68,14 +74,18 @@
   }
 
   .Earning-traffic-sub-title {
+    width: inherit;
   }
   .Designs-that-dazzels-sub-title {
+    width: inherit;
   }
   .Designs-that-dazzels-container {
+    width: inherit;
     flex-direction: column;
     margin-top: 50px;
   }
   .Expand-your-social-reach-sub-title {
+    width: auto;
   }
   .Expand-your-social-reach-container {
     display: flex;
@@ -98,15 +108,20 @@
     border-radius: 40px;
   }
   .sponsership-logo {
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 50px;
     gap: 98px;
   }
 
   /*-------------------------------------------------how-to-growth-your-bussiness-section------------------------------------------*/
+  .growth-bussiness-section {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
   .How-growth-business-container {
     padding: 0px;
     justify-content: center;
+    padding: 30px 20px;
     margin: 0px;
   }
   .How-growth-business-container-title {
@@ -163,15 +178,17 @@
   }
   .How-growth-business-container-trofy-and-like-container {
     display: flex;
-    padding-left: 0px;
+    padding: 0 20px;
+    gap: 30px;
   }
   .trofy-container-para {
-    /* width: inherit; */
+    width: auto;
     font-size: 18px;
     flex: 1;
   }
   .hand-like-done-container-para {
-    /* width: inherit; */
+    width: auto;
+
     font-size: 18px;
   }
 
@@ -184,7 +201,7 @@
   }
   .by-the-number-section-no-1-para {
     font-size: 15px;
-    width: inherit;
+    width: auto;
   }
   .by-the-number-section-no-1 {
     flex: 1;
@@ -195,10 +212,11 @@
   }
   .by-the-number-section-no-2-para {
     font-size: 15px;
-    width: inherit;
+    width: auto;
   }
   .by-the-number-section-no-3-introduction-para {
     margin: 0px;
+    flex: 1;
   }
   .by-the-number-section-no-3-introduction {
     padding-left: 0px;
@@ -374,7 +392,6 @@
   .Expand-your-social-reach-sub-title {
     font-size: 18px;
     line-height: 18px;
-    margin: 0px;
   }
   .Earning-traffic-title,
   .Designs-that-dazzels-title,
@@ -529,7 +546,7 @@
   .Branding-footer,
   .Socmed-marketing-footer,
   .Creative-footer {
-    font-size: 15px;
+    font-size: 14px;
   }
   .copy-right-section {
     margin: 0;
@@ -555,5 +572,14 @@
   }
   .copy-right-section li {
     font-size: 10px;
+  }
+  .footer-icon {
+    margin: 0px;
+    font-size: 16px;
+  }
+  .footer-icon i {
+    margin-right: 10px;
+    color: var(--dark-grey);
+    margin-top: 10px;
   }
 }
