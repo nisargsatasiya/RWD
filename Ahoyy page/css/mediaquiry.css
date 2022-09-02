@@ -176,19 +176,21 @@
   .Send-Me-a-Proposal-📄-button {
     margin-top: 40px;
   }
+  .hand-like-done-section {
+    padding: 50px 0;
+  }
   .How-growth-business-container-trofy-and-like-container {
     display: flex;
     padding: 0 20px;
     gap: 30px;
   }
   .trofy-container-para {
-    width: auto;
+    /* width: auto; */
     font-size: 18px;
     flex: 1;
   }
   .hand-like-done-container-para {
-    width: auto;
-
+    /* width: auto; */
     font-size: 18px;
   }
 
@@ -315,6 +317,7 @@
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    padding-top: 20px;
   }
   .footer-hr {
     margin-top: 30px;
