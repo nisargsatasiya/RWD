@@ -6,7 +6,7 @@ html {
 .max-width-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 ::selection {
   color: var(--white);
@@ -33,7 +33,7 @@ nav {
   z-index: 1;
 }
 .nav-bar {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,6 +41,8 @@ nav {
   height: inherit;
   border-bottom: 1px solid var(--gray);
   border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .logo p {
@@ -475,6 +477,7 @@ nav {
 .Digital-marketing-containers-wrapper {
   display: flex;
   flex-direction: row;
+  margin-left: 150px;
 }
 
 .earning-traffic-container {
@@ -616,9 +619,9 @@ nav {
   display: flex;
   justify-content: center;
   font-weight: 600;
-  font-size: 215px;
+  font-size: 200px;
   margin: 0;
-  padding-left: 70px;
+  padding-left: 80px;
   padding-top: 80px;
 }
 
@@ -628,7 +631,7 @@ nav {
   font-weight: 600;
   font-size: 42px;
   margin: 0;
-  padding-left: 80px;
+  padding-left: 100px;
 }
 
 .sponsership-logo {

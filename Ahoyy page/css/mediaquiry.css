@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
   .max-width-container {
-    padding: 0 0 0 0;
+    /* padding: 0 0 0 0; */
   }
   /* -----------------------------------------------------------nav-------------------------------------- */
   .fa-bars {
@@ -208,7 +208,7 @@
     gap: 20px;
   }
   .by-the-number-section-no-1-para {
-    font-size: 15px;
+    font-size: 20px;
     width: auto;
   }
   .by-the-number-section-no-1 {
@@ -376,7 +376,7 @@
     padding: 8px;
     font-size: 13px;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 25px;
     border-radius: 5px;
   }
   .hi {
