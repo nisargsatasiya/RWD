@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
   .max-width-container {
-    padding: 0;
+    padding: 0 0 0 0;
   }
   /* -----------------------------------------------------------nav-------------------------------------- */
   .fa-bars {
@@ -8,7 +8,7 @@
     font-size: 30px;
     color: var(--blue);
   }
-  .navbar-ul {
+  .navbar {
     display: none;
   }
   .hamburger-icon {
@@ -177,7 +177,7 @@
     margin-top: 40px;
   }
   .hand-like-done-section {
-    padding: 50px 0;
+    padding: 0 0;
   }
   .How-growth-business-container-trofy-and-like-container {
     display: flex;
@@ -185,21 +185,27 @@
     gap: 30px;
   }
   .trofy-container-para {
-    /* width: auto; */
+    width: auto;
     font-size: 18px;
     flex: 1;
   }
   .hand-like-done-container-para {
-    /* width: auto; */
+    width: auto;
     font-size: 18px;
   }
 
   /* ---------------------------------------by-the-number-section-no-3-------------------------------------------------------------------- */
   .by-the-number-section-no-3-title {
-    padding-left: 0px;
-    flex: 1;
-    width: 0px;
-    font-size: 31px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    gap: 130px;
+    margin: 0;
+  }
+  .By-the-numbers-section {
+    padding: 150px 20px 0 20px;
+    gap: 20px;
   }
   .by-the-number-section-no-1-para {
     font-size: 15px;
@@ -215,6 +221,12 @@
   .by-the-number-section-no-2-para {
     font-size: 15px;
     width: auto;
+  }
+  .by-the-number-section-no-3 {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 20px 0 20px;
+    gap: 63px;
   }
   .by-the-number-section-no-3-introduction-para {
     margin: 0px;
@@ -236,6 +248,7 @@
   }
   .by-the-number-section-no-2 {
     padding: 0px;
+    flex: 1;
   }
   .first-graph-container {
     width: 60px;
@@ -338,8 +351,8 @@
     display: none;
   }
   .nav-button-Get-in-touch {
-    padding: 8px;
-    font-size: 10px;
+    padding: 10px;
+    font-size: 12px;
     font-weight: 600;
     /* margin-top: 10px; */
     border-radius: 5px;
@@ -393,7 +406,7 @@
   .Earning-traffic-sub-title,
   .Designs-that-dazzels-sub-title,
   .Expand-your-social-reach-sub-title {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 18px;
   }
   .Earning-traffic-title,
@@ -431,10 +444,16 @@
     font-size: 17px;
     margin-top: 0px;
   }
+  .Designs-that-dazzels-container {
+    margin: 0px;
+  }
+  .Expand-your-social-reach-container {
+    margin: 0px;
+  }
   /* --------------------------------------------------sponsership-logo-and-more------------------------------------ */
 
   .seven-hundred-plus-text {
-    font-size: 90px;
+    font-size: 100px;
   }
   .Brands-already-onboard-text {
     font-size: 22px;
@@ -444,6 +463,7 @@
     font-size: 28px;
     margin-top: 50px;
     gap: 37px;
+    padding: 0;
   }
   /* -------------------------------------how-to-growth-your-bussiness-section--------------------------------- */
   .growth-bussiness-section {
@@ -472,6 +492,8 @@
   .by-the-number-section-no-3 {
     flex-direction: column;
     align-items: center;
+    margin: 25px 0 0 0;
+    gap: 25px;
   }
   .How-growth-business-container-title {
     font-size: 20px;
@@ -498,31 +520,38 @@
     height: 55px;
     width: 50px;
   }
+  .troffy-section {
+    width: inherit;
+  }
+  .hand-like-done-section {
+    width: inherit;
+    padding: 20px 0 0 0;
+  }
   /* -----------------------------------------------graph-section-------------------------------------- */
   .By-the-numbers-section {
-    margin: 40px;
+    /* margin: 40px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
   }
   .by-the-number-section-no-3-title {
-    width: inherit;
+    /* width: inherit; */
     font-size: 22px;
-    line-height: 27px;
+    /* line-height: 27px; */
   }
   .by-the-number-section-no-3-introduction {
     padding: 0px;
   }
   .by-the-number-section-no-3-introduction-para {
-    margin-left: 0px;
+    /* margin-left: 0px; */
     font-size: 12px;
   }
   .by-the-number-section-no-3-send-me-proposal-button {
     /* height: 35px; */
     /* width: 140px; */
     font-size: 15px;
-    margin: 0px;
+    margin: 10px 0 0 0;
   }
   .by-the-number-section-no-1 {
     display: flex;
@@ -539,7 +568,7 @@
   }
   .footer-hr {
     margin-top: 10px;
-    width: 375px;
+    width: 325px;
     background-color: var(--dark-grey);
     height: 1px;
     border: 0;
