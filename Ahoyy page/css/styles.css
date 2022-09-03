@@ -371,7 +371,6 @@ nav {
 /* ------------------------------------------------Digital-marketing-section-----------------------------------------*/
 .Digital-marketing-section {
   margin-top: 120px;
-  padding-left: 150px;
 }
 .branding-text-container {
   position: relative;
@@ -477,7 +476,6 @@ nav {
 .Digital-marketing-containers-wrapper {
   display: flex;
   flex-direction: row;
-  margin-left: 150px;
 }
 
 .earning-traffic-container {
@@ -1173,7 +1171,6 @@ nav {
 .by-the-number-section-no-1 {
   display: flex;
   flex-direction: column;
-  padding-left: 120px;
 }
 
 .by-the-number-text {
@@ -1312,7 +1309,6 @@ nav {
 }
 .by-the-number-section-no-3-title {
   font-size: 40px;
-  padding-left: 150px;
 }
 
 .by-the-number-section-no-3-send-me-proposal-button {
@@ -1362,7 +1358,6 @@ footer {
   align-items: center;
   cursor: alias;
   color: var(--white);
-  margin-left: 110px;
   padding-top: 80px;
 }
 
@@ -1426,7 +1421,6 @@ footer {
 
 .footer-ul-li-wrapper {
   margin-top: 30px;
-  margin-left: 110px;
   display: flex;
   justify-content: space-between;
 }
@@ -1615,7 +1609,7 @@ footer {
 /* --------------------------------------------------------------------------------------- */
 .footer-hr {
   margin-top: 100px;
-  width: 1000px;
+  width: 1200px;
   background-color: var(--dark-grey);
   height: 1.1px;
   border: 0;
@@ -1624,7 +1618,6 @@ footer {
 /* -------------------------------------------------------------copy-right-section------------------------------------------------ */
 
 .copy-right-section {
-  margin-left: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
