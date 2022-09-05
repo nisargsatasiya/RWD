@@ -277,30 +277,48 @@
             font-size: 14px;
           }
           .footer-icon i {
-            margin-right: 10px;
+            margin-right: 15px;
             color: var(--dark-grey);
-            margin-top: 10px;
+            margin-top: 20px;
           }
         }
         .footer-ul-li-wrapper {
           display: flex;
           margin: 0px 25px;
           flex-direction: column;
-          gap: 10px;
-          height: 90px;
+          flex-wrap: nowrap;
+          gap: 15px;
           margin-top: 50px;
-          margin-bottom: 20px;
-          .digital-marketing-footer,
-          .Website-devlopment-footer,
-          .Branding-footer,
-          .Socmed-marketing-footer,
+          margin-bottom: 50px;
+          .digital-marketing-footer {
+            .digital-marketing-footer-text {
+              font-size: 15px;
+            }
+          }
+          .Website-devlopment-footer {
+            .Website-devlopment-footer-text {
+              font-size: 15px;
+            }
+          }
+          .Branding-footer {
+            .Branding-footer-text {
+              font-size: 15px;
+            }
+          }
+          .Socmed-marketing-footer {
+            .Socmed-marketing-footer-text {
+              font-size: 15px;
+            }
+          }
           .Creative-footer {
-            font-size: 14px;
+            .Creative-footer-text {
+              font-size: 15px;
+            }
           }
         }
         .footer-hr {
           margin-top: 10px;
-          width: 360px;
+          width: 100%;
           background-color: $dark-grey;
           height: 1px;
           border: 0;
@@ -311,15 +329,15 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-
+          height: auto;
           .copy-right-text {
-            margin: 0;
-            font-size: 13px;
+            font-size: 10px;
             line-height: 20px;
-          }
-          .copy-right-section ul {
             margin: 0px;
-            .copy-right-section li {
+          }
+          ul {
+            margin: 0px;
+            li {
               font-size: 10px;
             }
           }

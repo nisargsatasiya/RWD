@@ -1780,29 +1780,37 @@ body .hero-photo-section .hero-photo-section-image-no-4 {
     font-size: 14px;
   }
   body footer .footer-section .navmenu-footer .footer-icon i {
-    margin-right: 10px;
+    margin-right: 15px;
     color: var(--dark-grey);
-    margin-top: 10px;
+    margin-top: 20px;
   }
   body footer .footer-section .footer-ul-li-wrapper {
     display: flex;
     margin: 0px 25px;
     flex-direction: column;
-    gap: 10px;
-    height: 90px;
+    flex-wrap: nowrap;
+    gap: 15px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
-  body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer,
-body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer,
-body footer .footer-section .footer-ul-li-wrapper .Branding-footer,
-body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer,
-body footer .footer-section .footer-ul-li-wrapper .Creative-footer {
-    font-size: 14px;
+  body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer .digital-marketing-footer-text {
+    font-size: 15px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer-text {
+    font-size: 15px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer-text {
+    font-size: 15px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer-text {
+    font-size: 15px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer-text {
+    font-size: 15px;
   }
   body footer .footer-section .footer-hr {
     margin-top: 10px;
-    width: 360px;
+    width: 100%;
     background-color: #a1a1a1;
     height: 1px;
     border: 0;
@@ -1813,16 +1821,17 @@ body footer .footer-section .footer-ul-li-wrapper .Creative-footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
   }
   body footer .footer-section .copy-right-section .copy-right-text {
-    margin: 0;
-    font-size: 13px;
+    font-size: 10px;
     line-height: 20px;
-  }
-  body footer .footer-section .copy-right-section .copy-right-section ul {
     margin: 0px;
   }
-  body footer .footer-section .copy-right-section .copy-right-section ul .copy-right-section li {
+  body footer .footer-section .copy-right-section ul {
+    margin: 0px;
+  }
+  body footer .footer-section .copy-right-section ul li {
     font-size: 10px;
   }
 }
