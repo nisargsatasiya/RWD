@@ -1,0 +1,1265 @@
+@import "variables";
+@import "animation";
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.max-width-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+}
+
+::selection {
+  color: $white;
+  background: $blue;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background-color: $white;
+
+  nav {
+    width: 100%;
+    background-color: $white;
+    height: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid $gray;
+    border-radius: 10px;
+
+    .nav-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: inherit;
+      padding-left: 25px;
+      padding-right: 25px;
+      .fa-bars {
+        display: none;
+        font-size: 30px;
+        color: var(--blue);
+      }
+
+      .logo p {
+        display: inline;
+      }
+
+      .hamburger-icon {
+        display: none;
+      }
+
+      .fa-snowflake-o {
+        border-radius: 50%;
+        color: $blue;
+        font-size: 35px;
+        transition: all 2s ease-in-out;
+      }
+
+      .fa-snowflake-o:hover {
+        animation: rotate-center 0.6s ease-in-out both;
+        cursor: pointer;
+      }
+
+      .logo-text {
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 22px;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        font-weight: 600;
+        font-size: 15px;
+        color: $dark-grey;
+        cursor: pointer;
+      }
+
+      .navbar li:hover {
+        color: $black;
+        font-weight: 600;
+      }
+
+      .navbar li {
+        padding: 10px;
+      }
+
+      .nav-button-Get-in-touch {
+        background-color: $very-light-grey;
+        color: var(--black);
+        @include button;
+      }
+
+      .nav-button-Get-in-touch:hover {
+        background-color: $black;
+        color: $white;
+      }
+
+      .nav-button-Get-in-touch:hover > .hi-1 {
+        cursor: pointer;
+        background-color: $black;
+        color: $white;
+        animation-name: hi-1;
+        font-weight: 600;
+        animation-duration: 0.4s;
+      }
+    }
+  }
+
+  /* ---------------------------------------------------------hero-header---------------------------------------------- */
+
+  .hero-header {
+    padding: 150px 100px 0;
+
+    .hero-header-title {
+      font-size: 64px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .hero-header-Get-in-touch-button {
+      @include button;
+      background-color: $blue;
+      color: $white;
+
+      margin-top: 50px;
+    }
+
+    .hero-header-Get-in-touch-button:hover {
+      display: flex;
+      background-color: $black;
+    }
+
+    .hero-header-Get-in-touch-button:hover > .hi {
+      color: $blue;
+      transform: rotateZ(90deg);
+      animation-duration: 0.4s;
+      animation-name: hi;
+    }
+
+    .hi {
+      font-size: 18px;
+      margin: 0 0 0 10px;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+    }
+
+    .lines-wrapper {
+      display: flex;
+      position: relative;
+      left: 290px;
+      bottom: 30px;
+      width: 0px;
+    }
+
+    .line-1 {
+      position: absolute;
+      top: 25px;
+      right: 58px;
+      height: 25px;
+      width: 4px;
+      background-color: $blue;
+      border-radius: 50px;
+      transform: rotate(-75deg);
+    }
+
+    .line-2 {
+      margin-left: 15px;
+      position: absolute;
+      top: 0px;
+      right: 55px;
+      height: 40px;
+      width: 4px;
+      background-color: $blue;
+      border-radius: 50px;
+      transform: rotate(-45deg);
+    }
+
+    .line-three {
+      margin-left: 15px;
+      height: 20px;
+      position: absolute;
+      top: 5px;
+      right: 35px;
+      width: 4px;
+      background-color: $blue;
+      border-radius: 50px;
+    }
+  }
+
+  /*------------------------------------------------hero-photo-section--------------------------------------------------- */
+
+  .hero-photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-photo-section-image-no-1 {
+      @include images;
+    }
+
+    .image-wrappar-1-hero:after {
+      @include imgaes-gradient;
+    }
+
+    .image-wrappar-1-hero:hover {
+      filter: grayscale(100%);
+    }
+
+    .hero-photo-section-image-no-2 {
+      margin-top: 150px;
+      margin-left: 20px;
+      @include images;
+    }
+
+    .image-wrappar-2-hero:after {
+      @include imgaes-gradient;
+    }
+
+    .image-wrappar-2-hero:hover {
+      filter: grayscale(100%);
+    }
+
+    .hero-photo-section-image-no-3 {
+      @include images;
+      margin-left: 20px;
+    }
+
+    .image-wrappar-3-hero:after {
+      @include imgaes-gradient;
+    }
+
+    .image-wrappar-3-hero:hover {
+      filter: grayscale(100%);
+    }
+
+    .hero-photo-section-image-no-4 {
+      margin-top: 150px;
+      margin-left: 20px;
+      @include images;
+    }
+
+    .image-wrappar-4-hero:after {
+      @include imgaes-gradient;
+    }
+
+    .image-wrappar-4-hero:hover {
+      filter: grayscale(100%);
+    }
+  }
+
+  /* ------------------------------------------------Digital-marketing-section-----------------------------------------*/
+  .Digital-marketing-section {
+    margin-top: 120px;
+
+    .branding-text-container {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .branding-text-container:hover .Digital-marketing-Branding-text {
+      opacity: 1;
+      -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation-delay: 0.2s;
+    }
+
+    .branding-text-container:hover .Digital-marketing-Social-Ads-text {
+      opacity: 1;
+      -webkit-animation: 0.3s Ads-text-top cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: 0.3s Ads-text-top cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation-delay: 0.1s;
+    }
+
+    .Digital-marketing-Branding-text {
+      margin: 0px;
+      font-size: 40px;
+      position: absolute;
+      opacity: 0;
+      color: $very-light-grey;
+      animation-name: branding-text;
+    }
+
+    .Digital-marketing-Social-Ads-text {
+      margin: 0px;
+      font-size: 40px;
+      color: $light-grey;
+      position: absolute;
+      opacity: 0;
+      animation-name: ads-slide;
+    }
+
+    .Digital-marketing-subtitle-paragraph {
+      position: relative;
+      font-size: 42px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .Digital-marketing-subtitle-Digital-marketing-text {
+      position: relative;
+      color: $blue;
+      font-size: 42px;
+      margin: 0;
+    }
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+  .Digital-marketing-containers-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: $blue;
+    }
+
+    .earning-traffic-container {
+      flex: 1;
+      margin-top: 50px;
+    }
+
+    .graph-emoji {
+      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $gray;
+      background-color: $white;
+      font-size: 21px;
+    }
+
+    .graph-emoji:hover {
+      background-color: $black;
+      cursor: pointer;
+      animation: slide-fwd-top 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+
+    .Earning-traffic-title {
+    }
+
+    .Earning-traffic-sub-title {
+      @include Digital-marketing-containers-sub-title;
+      color: $dark-grey;
+      width: 298px;
+    }
+
+    .Designs-that-dazzels-container {
+      flex: 1;
+      margin-top: 50px;
+    }
+
+    .paint-emoji {
+      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $gray;
+      background-color: $white;
+      font-size: 21px;
+    }
+
+    .paint-emoji:hover {
+      background-color: $black;
+      cursor: pointer;
+      animation: slide-fwd-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+
+    .Designs-that-dazzels-sub-title {
+      @include Digital-marketing-containers-sub-title;
+      color: $dark-grey;
+      width: 309px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .Expand-your-social-reach-container {
+      flex: 1;
+      margin-top: 50px;
+    }
+
+    .rocket-emoji {
+      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $gray;
+      background-color: $white;
+      font-size: 21px;
+    }
+
+    .rocket-emoji:hover {
+      background-color: $black;
+      cursor: pointer;
+      animation: slide-fwd-top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    .Expand-your-social-reach-sub-title {
+      @include Digital-marketing-containers-sub-title;
+      color: $dark-grey;
+      width: 280px;
+    }
+  }
+
+  /* ---------------------------sponsership-logo-and-more-------------------------------------------------------------- */
+
+  .sponsership-logo-and-more {
+    display: flex;
+    flex-direction: row;
+    background-color: $off-white;
+    margin-top: 120px;
+    padding-bottom: 200px;
+    border-radius: 40px;
+
+    .sponsership-section-title-and-subtitle {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .seven-hundred-plus-text {
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 200px;
+      margin: 0;
+      padding-left: 80px;
+      padding-top: 80px;
+    }
+
+    .Brands-already-onboard-text {
+      display: flex;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 42px;
+      margin: 0;
+      padding-left: 100px;
+    }
+
+    .sponsership-logo {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      padding: 111px 0px 0px 10px;
+      font-size: 45px;
+      gap: 80px;
+    }
+
+    .fa-apple {
+      color: #555555;
+      @include sponser-ship-logo;
+    }
+
+    .fa-apple:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-android {
+      color: #a4c639;
+      @include sponser-ship-logo;
+    }
+
+    .fa-android:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-amazon {
+      color: #ff9900;
+      @include sponser-ship-logo;
+    }
+
+    .fa-amazon:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-cc-jcb {
+      color: #f9b101;
+      @include sponser-ship-logo;
+    }
+
+    .fa-cc-jcb:hover {
+      animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+
+    .fa-google-plus-official {
+      color: #db4a39;
+      @include sponser-ship-logo;
+    }
+
+    .fa-google-plus-official:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-snapchat {
+      color: #000000;
+      @include sponser-ship-logo;
+    }
+
+    .fa-snapchat:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-chrome {
+      color: #777888;
+      @include sponser-ship-logo;
+    }
+
+    .fa-chrome:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-edge {
+      color: #003380;
+      @include sponser-ship-logo;
+    }
+
+    .fa-edge:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-cc-visa {
+      color: #1a1f71;
+      @include sponser-ship-logo;
+    }
+
+    .fa-cc-visa:hover {
+      animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+
+    .fa-bandcamp {
+      color: #629aa9;
+      @include sponser-ship-logo;
+    }
+
+    .fa-bandcamp:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-dropbox {
+      color: #3d9ae8;
+      @include sponser-ship-logo;
+    }
+
+    .fa-dropbox:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-telegram {
+      color: #229ed9;
+      @include sponser-ship-logo;
+    }
+
+    .fa-telegram:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-firefox {
+      color: #e66000;
+      @include sponser-ship-logo;
+    }
+
+    .fa-firefox:hover {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+
+    .fa-cc-paypal {
+      color: #3b7bbf;
+      @include sponser-ship-logo;
+    }
+
+    .fa-cc-paypal:hover {
+      animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+
+    .fa-instagram {
+      color: #a62eb8;
+      @include sponser-ship-logo;
+    }
+
+    .fa-instagram:hover {
+      animation: rotate-scale-up-diag-2 0.7s linear both;
+    }
+  }
+
+  /* --------------------------------------------------------------------------growth-bussiness-section--------------------------------------------------------------------------- */
+
+  .growth-bussiness-section {
+    background-color: $light-white;
+    border-radius: 40px;
+    padding-bottom: 80px;
+
+    .How-growth-business-container {
+      display: flex;
+      flex-direction: row;
+      padding-left: 110px;
+      margin-top: 110px;
+      padding-top: 100px;
+
+      .metting-room-image {
+        height: 400px;
+        width: 450px;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+
+      .metting-room-image:hover {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+
+      .metting-room-image:hover {
+        animation-name: image-metting;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        cursor: pointer;
+      }
+
+      .How-growth-business-container-infromation {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding-left: 100px;
+      }
+
+      .How-growth-business-container-title {
+        font-size: 38px;
+        width: 352px;
+        margin: 0;
+        margin-bottom: 25px;
+      }
+
+      .fa-check-circle {
+        color: $orange;
+        font-size: 20px;
+      }
+
+      .check-icon-text-no-1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+        color: $dark-grey;
+      }
+
+      .check-icon-text-no-2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark-grey;
+        margin-top: 0px;
+      }
+
+      .check-icon-text-no-3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark-grey;
+        margin-top: 0px;
+      }
+
+      .check-icon-text-no-4 {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+        width: 400px;
+        line-height: 20px;
+        color: $dark-grey;
+        margin-top: 0px;
+      }
+
+      .Send-Me-a-Proposal-📄-button {
+        @include button;
+        background-color: $blue;
+        color: $white;
+        width: 200px;
+        margin-top: 35px;
+      }
+
+      .Send-Me-a-Proposal-📄-button:hover {
+        cursor: pointer;
+        background-color: $black;
+        color: $blue;
+        font-weight: 600;
+      }
+    }
+
+    /* ------------------------------------------------------How-growth-business-container-trofy-and-like-container---------------------------------------------- */
+
+    .How-growth-business-container-trofy-and-like-container {
+      display: flex;
+      margin-top: 100px;
+      padding-left: 120px;
+
+      .troffy-section {
+        flex: 1;
+
+        .trofy {
+          height: 60px;
+          width: 55px;
+          border-radius: 10px;
+          border: 1px solid $gray;
+          background-color: $white;
+          font-size: 23px;
+        }
+
+        .trofy:hover {
+          background-color: $black;
+          cursor: pointer;
+          animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+        }
+
+        .trofy-container-title {
+          margin: 0px;
+          margin-top: 25px;
+        }
+
+        .trofy-container-para {
+          margin: 0px;
+          margin-top: 15px;
+          width: 418px;
+          line-height: 25px;
+          font-size: 15px;
+          font-weight: 500;
+          color: $dark-grey;
+        }
+      }
+
+      .hand-like-done-section {
+        flex: 1;
+
+        .hand-like-done {
+          height: 60px;
+          width: 55px;
+          border-radius: 10px;
+          border: 1px solid $gray;
+          background-color: $white;
+          font-size: 23px;
+        }
+
+        .hand-like-done:hover {
+          background-color: $black;
+          cursor: pointer;
+          animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+        }
+
+        .hand-like-done-container-title {
+          margin: 0px;
+          margin-top: 25px;
+        }
+
+        .hand-like-done-container-para {
+          margin: 0px;
+          margin-top: 15px;
+          width: 415px;
+          line-height: 25px;
+          font-size: 15px;
+          font-weight: 500;
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+
+  /* ---------------------------------------------------------By-the-numbers-section-------------------------------------------------------------- */
+
+  .By-the-numbers-section {
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    gap: 100px;
+    /*///// -----------------------------------------------------------by-the-number-section-no-1-------------------------------------------- ////*/
+
+    .by-the-number-section-no-1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .by-the-number-text {
+      font-size: 42px;
+      margin: 0px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    .ninety-percnt-text {
+      font-size: 222px;
+      margin: 0px;
+    }
+
+    .retention-text {
+      font-size: 25px;
+      margin: 0px;
+    }
+
+    .by-the-number-section-no-1-para {
+      font-size: 17px;
+      width: 466px;
+      color: $dark-grey;
+      font-weight: 500;
+      line-height: 25px;
+    }
+
+    /*///// -----------------------------------------------------------by-the-number-section-no-2-------------------------------------------- ////*/
+
+    .by-the-number-section-no-2 {
+      display: flex;
+      flex-direction: column;
+      padding-left: 80px;
+
+      .by-the-number-section-no-2-para {
+        font-size: 17px;
+        width: 466px;
+        line-height: 25px;
+        font-weight: 500;
+        color: $dark-grey;
+      }
+
+      .graph-container-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .first-graph-container {
+          height: 260px;
+          width: 90px;
+          background-color: $very-light-pink;
+          border-radius: 20px 20px 0px 0px;
+          border: 0;
+          position: absolute;
+          top: 100px;
+          opacity: 0;
+        }
+
+        .first-graph-container:hover {
+          animation: scale-up-ver-bottom 0.4s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        .second-graph-container {
+          @include gray-graph;
+          background-color: $very-light-grey;
+        }
+
+        .third-graph-container {
+          height: 110px;
+          width: 90px;
+          background-color: $light-cyan;
+          border-radius: 20px 20px 0px 0px;
+          border: 0;
+          position: absolute;
+          top: 250px;
+          opacity: 0;
+        }
+
+        .third-graph-container:hover {
+          animation: scale-up-ver-bottom 0.4s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        .fourth-graph-container {
+          @include gray-graph;
+          background-color: $very-light-grey;
+          left: 30px;
+        }
+
+        .fifth-graph-container {
+          height: 320px;
+          width: 90px;
+          background-color: $blue;
+          border-radius: 20px 20px 0px 0px;
+          border: 0;
+          position: absolute;
+          top: 40px;
+          opacity: 0;
+        }
+
+        .fifth-graph-container:hover {
+          animation: scale-up-ver-bottom 0.4s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        .sixth-graph-container {
+          @include gray-graph;
+          background-color: $very-light-grey;
+          left: 60px;
+        }
+
+        .seventh-graph-container {
+          height: 210px;
+          width: 90px;
+          background-color: $gray;
+          border-radius: 20px 20px 0px 0px;
+          border: 0;
+          position: absolute;
+          top: 150px;
+          opacity: 0;
+        }
+
+        .seventh-graph-container:hover {
+          animation: scale-up-ver-bottom 0.4s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        .eigthth-graph-container {
+          left: 90px;
+          @include gray-graph;
+          background-color: $very-light-grey;
+        }
+      }
+    }
+  }
+
+  /* -----------------------------------------------------------by-the-number-section-no-3----------------------------------------------- */
+
+  .by-the-number-section-no-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    padding: 100px 0 0;
+
+    .by-the-number-section-no-3-title {
+      font-size: 40px;
+    }
+
+    .by-the-number-section-no-3-send-me-proposal-button {
+      height: 40px;
+      width: 200px;
+      border-radius: 8px;
+      border: 0;
+      background-color: $blue;
+      color: $white;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .by-the-number-section-no-3-send-me-proposal-button:hover {
+      cursor: pointer;
+      background-color: $black;
+      color: $blue;
+      font-weight: 600;
+    }
+
+    .by-the-number-section-no-3-introduction-para {
+      color: $dark-grey;
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  /* ----------------------------------------------------------------footer-------------------------------------------- */
+
+  footer {
+    background-color: $black;
+    margin-top: 120px;
+    cursor: alias;
+    width: 100%;
+
+    .footer-section {
+      width: 100%;
+
+      .navmenu-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: alias;
+        color: $white;
+        padding-top: 80px;
+
+        .logo-footer {
+          display: flex;
+          align-items: center;
+
+          .fa-snowflake-o {
+            border-radius: 50%;
+            color: $blue;
+            font-size: 35px;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+          }
+
+          .logo-text-footer {
+            margin-left: 10px;
+            font-weight: 600;
+            font-size: 22px;
+            cursor: pointer;
+          }
+        }
+
+        .footer-icon {
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          font-weight: 500;
+          font-size: 18px;
+          color: $white-gray;
+
+          i {
+            margin-right: 15px;
+            color: $dark-grey;
+          }
+
+          .fa-twitter {
+            margin-right: 15px;
+            color: $dark-grey;
+          }
+
+          .fa-youtube-play {
+            color: $dark-grey;
+          }
+        }
+
+        .footer-icon i:hover {
+          color: $white;
+          cursor: pointer;
+        }
+
+        .fa-snowflake-o:hover {
+          cursor: pointer;
+          animation: rotate-center 0.6s ease-in-out both;
+        }
+      }
+
+      /* -------------------------------------------footer-ul-li-wrapper----------------------------------------------------- */
+
+      .footer-ul-li-wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .digital-marketing-footer {
+          color: white;
+          line-height: 10px;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+
+          ul {
+            @include footer-ul;
+            li {
+              @include footer-li;
+              color: $white-gray;
+            }
+          }
+
+          .digital-marketing-footer-text {
+            font-size: 17px;
+            font-weight: 500;
+          }
+
+          .digital-marketing-footer-text:hover {
+            color: $gray;
+            cursor: pointer;
+          }
+
+          .digital-marketing-footer li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+        }
+
+        /* --------------------------------------------------------------- */
+
+        .Website-devlopment-footer {
+          color: white;
+          line-height: 10px;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+
+          ul {
+            @include footer-ul;
+
+            li {
+              @include footer-li;
+              color: $white-gray;
+            }
+          }
+
+          .Website-devlopment-footer-text {
+            font-size: 17px;
+            font-weight: 500;
+          }
+
+          .Website-devlopment-footer-text:hover {
+            color: $gray;
+            cursor: pointer;
+          }
+
+          .Website-devlopment-footer li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+        }
+
+        /* --------------------------------------------------------------- */
+
+        .Branding-footer {
+          color: white;
+          line-height: 10px;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+
+          .Branding-footer-text {
+            font-size: 17px;
+            font-weight: 500;
+          }
+
+          ul {
+            @include footer-ul;
+
+            li {
+              @include footer-li;
+              color: $white-gray;
+            }
+          }
+
+          .Branding-footer li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+
+          .Branding-footer-text:hover {
+            color: $gray;
+            cursor: pointer;
+          }
+        }
+
+        /* --------------------------------------------------------------- */
+
+        .Socmed-marketing-footer {
+          color: white;
+          line-height: 10px;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+
+          .Socmed-marketing-footer-text {
+            font-size: 17px;
+            font-weight: 500;
+          }
+
+          ul {
+            @include footer-ul;
+
+            li {
+              @include footer-li;
+              color: $white-gray;
+            }
+          }
+
+          .Socmed-marketing-footer li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+
+          .Socmed-marketing-footer-text:hover {
+            color: $gray;
+            cursor: pointer;
+          }
+        }
+
+        /* --------------------------------------------------------------- */
+
+        .Creative-footer {
+          color: white;
+          line-height: 10px;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+
+          .Creative-footer-text {
+            font-size: 17px;
+            font-weight: 500;
+          }
+
+          ul {
+            @include footer-ul;
+
+            li {
+              @include footer-li;
+              color: $white-gray;
+            }
+          }
+
+          .Creative-footer li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+
+          .Creative-footer-text:hover {
+            color: $gray;
+            cursor: pointer;
+          }
+        }
+
+        /* --------------------------------------------------------------------------------------- */
+      }
+
+      .footer-hr {
+        margin-top: 100px;
+        width: 1200px;
+        background-color: $dark-grey;
+        height: 1.1px;
+        border: 0;
+      }
+
+      /* -------------------------------------------------------------copy-right-section------------------------------------------------ */
+
+      .copy-right-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copy-right-text {
+          display: flex;
+          justify-content: center;
+          font-size: 14px;
+          color: $dark-grey;
+        }
+
+        ul {
+          display: flex;
+          padding: 0px;
+
+          li {
+            display: flex;
+            color: $dark-grey;
+            font-size: 14px;
+            padding: 0 10px;
+          }
+
+          li:hover {
+            color: $white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------PAGE-SCSS-END-------------------------------------------- */
+}

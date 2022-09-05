@@ -1,4 +1,88 @@
 @charset "UTF-8";
+@keyframes hi {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+    /* transform: translateY(20px); */
+    transform: translateX(5px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes Ads-text-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+}
+@keyframes slide-fwd-top {
+  0% {
+    transform: translateZ(0) translateY(0);
+  }
+  100% {
+    transform: translateZ(100px) translateY(-20px);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shadow-pop-bl {
+  0% {
+    box-shadow: 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: -1px 1px #ffffff, -2px 2px #ffffff, -3px 3px #ffffff, -4px 4px #ffffff, -5px 5px #ffffff, -6px 6px #ffffff, -7px 7px #ffffff, -8px 8px #ffffff;
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+@keyframes rotate-scale-up-diag-2 {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes scale-up-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+}
 html {
   margin: 0;
   padding: 0;
@@ -11,8 +95,8 @@ html {
 }
 
 ::selection {
-  color: var(--white);
-  background: var(--blue);
+  color: #ffffff;
+  background: #5134ff;
 }
 
 body {
@@ -40,9 +124,9 @@ body nav {
   position: fixed;
   z-index: 1;
   border-bottom: 1px solid #c7c7c7;
+  border-radius: 10px;
 }
 body nav .nav-bar {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,6 +134,11 @@ body nav .nav-bar {
   height: inherit;
   padding-left: 25px;
   padding-right: 25px;
+}
+body nav .nav-bar .fa-bars {
+  display: none;
+  font-size: 30px;
+  color: var(--blue);
 }
 body nav .nav-bar .logo p {
   display: inline;
@@ -65,16 +154,7 @@ body nav .nav-bar .fa-snowflake-o {
 }
 body nav .nav-bar .fa-snowflake-o:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: logo;
   cursor: pointer;
-}
-@keyframes logo {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body nav .nav-bar .logo-text {
   margin-left: 10px;
@@ -97,13 +177,13 @@ body nav .nav-bar .navbar li {
   padding: 10px;
 }
 body nav .nav-bar .nav-button-Get-in-touch {
+  background-color: #f3f3f3;
+  color: var(--black);
   padding: 15px;
   font-size: 15px;
   border: 0px;
   border-radius: 10px;
   font-weight: 700;
-  background-color: #f3f3f3;
-  color: var(--black);
   cursor: pointer;
 }
 body nav .nav-bar .nav-button-Get-in-touch:hover {
@@ -118,22 +198,6 @@ body nav .nav-bar .nav-button-Get-in-touch:hover > .hi-1 {
   font-weight: 600;
   animation-duration: 0.4s;
 }
-@keyframes hi-1 {
-  0% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(90deg);
-    /* transform: translateY(20px); */
-    transform: translateX(5px);
-  }
-}
-body nav .nav-bar .hi-1 {
-  font-size: 18px;
-  margin: 0 0 0 10px;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
 body .hero-header {
   padding: 150px 100px 0;
 }
@@ -144,13 +208,13 @@ body .hero-header .hero-header-title {
 }
 body .hero-header .hero-header-Get-in-touch-button {
   padding: 15px;
-  font-size: 14px;
+  font-size: 15px;
   border: 0px;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 700;
+  cursor: pointer;
   background-color: #5134ff;
   color: #ffffff;
-  cursor: pointer;
   margin-top: 50px;
 }
 body .hero-header .hero-header-Get-in-touch-button:hover {
@@ -168,16 +232,6 @@ body .hero-header .hi {
   margin: 0 0 0 10px;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
-}
-@keyframes hi {
-  0% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(90deg);
-    /* transform: translateY(20px); */
-    transform: translateX(5px);
-  }
 }
 body .hero-header .lines-wrapper {
   display: flex;
@@ -228,7 +282,6 @@ body .hero-photo-section .hero-photo-section-image-no-1 {
   border-radius: 20px;
   object-fit: cover;
   cursor: pointer;
-  background-color: linear-gradient(red, yellow);
 }
 body .hero-photo-section .image-wrappar-1-hero:after {
   display: block;
@@ -243,11 +296,11 @@ body .hero-photo-section .image-wrappar-1-hero:hover {
   filter: grayscale(100%);
 }
 body .hero-photo-section .hero-photo-section-image-no-2 {
+  margin-top: 150px;
+  margin-left: 20px;
   height: 380px;
   width: 280px;
   border-radius: 20px;
-  margin-top: 150px;
-  margin-left: 20px;
   object-fit: cover;
   cursor: pointer;
 }
@@ -267,9 +320,9 @@ body .hero-photo-section .hero-photo-section-image-no-3 {
   height: 380px;
   width: 280px;
   border-radius: 20px;
-  margin-left: 20px;
   object-fit: cover;
   cursor: pointer;
+  margin-left: 20px;
 }
 body .hero-photo-section .image-wrappar-3-hero:after {
   display: block;
@@ -284,11 +337,11 @@ body .hero-photo-section .image-wrappar-3-hero:hover {
   filter: grayscale(100%);
 }
 body .hero-photo-section .hero-photo-section-image-no-4 {
+  margin-top: 150px;
+  margin-left: 20px;
   height: 380px;
   width: 280px;
   border-radius: 20px;
-  margin-top: 150px;
-  margin-left: 20px;
   object-fit: cover;
   cursor: pointer;
 }
@@ -313,14 +366,14 @@ body .Digital-marketing-section .branding-text-container {
 }
 body .Digital-marketing-section .branding-text-container:hover .Digital-marketing-Branding-text {
   opacity: 1;
-  -webkit-animation: branding-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: branding-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 0.2s;
 }
 body .Digital-marketing-section .branding-text-container:hover .Digital-marketing-Social-Ads-text {
   opacity: 1;
-  -webkit-animation: 0.3s Ads-text cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: 0.3s Ads-text cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: 0.3s Ads-text-top cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: 0.3s Ads-text-top cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 0.1s;
 }
 body .Digital-marketing-section .Digital-marketing-Branding-text {
@@ -331,26 +384,6 @@ body .Digital-marketing-section .Digital-marketing-Branding-text {
   color: #f3f3f3;
   animation-name: branding-text;
 }
-@-webkit-keyframes branding-top {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
-@keyframes branding-top {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
 body .Digital-marketing-section .Digital-marketing-Social-Ads-text {
   margin: 0px;
   font-size: 40px;
@@ -358,26 +391,6 @@ body .Digital-marketing-section .Digital-marketing-Social-Ads-text {
   position: absolute;
   opacity: 0;
   animation-name: ads-slide;
-}
-@-webkit-keyframes Ads-text {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-}
-@keyframes Ads-text {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
 }
 body .Digital-marketing-section .Digital-marketing-subtitle-paragraph {
   position: relative;
@@ -391,14 +404,6 @@ body .Digital-marketing-section .Digital-marketing-subtitle-Digital-marketing-te
   font-size: 42px;
   margin: 0;
 }
-@keyframes Digital-marketing-subtitle-Digital-marketing-text {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-70px);
-  }
-}
 body .Digital-marketing-containers-wrapper {
   display: flex;
   flex-direction: row;
@@ -408,8 +413,6 @@ body .Digital-marketing-containers-wrapper a {
   color: #5134ff;
 }
 body .Digital-marketing-containers-wrapper .earning-traffic-container {
-  /* width: 180px; */
-  /* float: left; */
   flex: 1;
   margin-top: 50px;
 }
@@ -420,30 +423,17 @@ body .Digital-marketing-containers-wrapper .graph-emoji {
   border: 1px solid #c7c7c7;
   background-color: #ffffff;
   font-size: 21px;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 body .Digital-marketing-containers-wrapper .graph-emoji:hover {
   background-color: #222222;
   cursor: pointer;
-  animation: scale-up-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation-name: graph-emoji;
-}
-@keyframes graph-emoji {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
+  animation: slide-fwd-top 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 body .Digital-marketing-containers-wrapper .Earning-traffic-sub-title {
   font-size: 15px;
+  line-height: 25px;
   color: #a1a1a1;
   width: 298px;
-  line-height: 25px;
-  animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container {
   flex: 1;
@@ -456,27 +446,17 @@ body .Digital-marketing-containers-wrapper .paint-emoji {
   border: 1px solid #c7c7c7;
   background-color: #ffffff;
   font-size: 21px;
-  animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 body .Digital-marketing-containers-wrapper .paint-emoji:hover {
   background-color: #222222;
   cursor: pointer;
-  animation: scale-up-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation-name: paint-emoji;
-}
-@keyframes paint-emoji {
-  0% {
-    transform: translateZ(0) translateY(0);
-  }
-  100% {
-    transform: translateZ(100px) translateY(-20px);
-  }
+  animation: slide-fwd-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 body .Digital-marketing-containers-wrapper .Designs-that-dazzels-sub-title {
   font-size: 15px;
+  line-height: 25px;
   color: #a1a1a1;
   width: 309px;
-  line-height: 25px;
 }
 body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container {
   flex: 1;
@@ -494,21 +474,12 @@ body .Digital-marketing-containers-wrapper .rocket-emoji:hover {
   background-color: #222222;
   cursor: pointer;
   animation: slide-fwd-top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-name: rocket-emoji;
-}
-@keyframes rocket-emoji {
-  0% {
-    transform: translateZ(0) translateY(0);
-  }
-  100% {
-    transform: translateZ(100px) translateY(-20px);
-  }
 }
 body .Digital-marketing-containers-wrapper .Expand-your-social-reach-sub-title {
   font-size: 15px;
+  line-height: 25px;
   color: #a1a1a1;
   width: 280px;
-  line-height: 25px;
 }
 body .sponsership-logo-and-more {
   display: flex;
@@ -554,15 +525,6 @@ body .sponsership-logo-and-more .fa-apple {
 }
 body .sponsership-logo-and-more .fa-apple:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: apple;
-}
-@keyframes apple {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-android {
   color: #a4c639;
@@ -571,15 +533,6 @@ body .sponsership-logo-and-more .fa-android {
 }
 body .sponsership-logo-and-more .fa-android:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: android;
-}
-@keyframes android {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-amazon {
   color: #ff9900;
@@ -588,15 +541,6 @@ body .sponsership-logo-and-more .fa-amazon {
 }
 body .sponsership-logo-and-more .fa-amazon:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: amazon;
-}
-@keyframes amazon {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-cc-jcb {
   color: #f9b101;
@@ -605,17 +549,6 @@ body .sponsership-logo-and-more .fa-cc-jcb {
 }
 body .sponsership-logo-and-more .fa-cc-jcb:hover {
   animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation-name: jcb;
-}
-@keyframes jcb {
-  0% {
-    box-shadow: 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    box-shadow: -1px 1px #ffffff, -2px 2px #ffffff, -3px 3px #ffffff, -4px 4px #ffffff, -5px 5px #ffffff, -6px 6px #ffffff, -7px 7px #ffffff, -8px 8px #ffffff;
-    transform: translateX(8px) translateY(-8px);
-  }
 }
 body .sponsership-logo-and-more .fa-google-plus-official {
   color: #db4a39;
@@ -624,15 +557,6 @@ body .sponsership-logo-and-more .fa-google-plus-official {
 }
 body .sponsership-logo-and-more .fa-google-plus-official:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: google-plus;
-}
-@keyframes google-plus {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-snapchat {
   color: #000000;
@@ -641,15 +565,6 @@ body .sponsership-logo-and-more .fa-snapchat {
 }
 body .sponsership-logo-and-more .fa-snapchat:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: snapchat;
-}
-@keyframes snapchat {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-chrome {
   color: #777888;
@@ -658,15 +573,6 @@ body .sponsership-logo-and-more .fa-chrome {
 }
 body .sponsership-logo-and-more .fa-chrome:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: chrome;
-}
-@keyframes chrome {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-edge {
   color: #003380;
@@ -675,35 +581,14 @@ body .sponsership-logo-and-more .fa-edge {
 }
 body .sponsership-logo-and-more .fa-edge:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: edge;
-}
-@keyframes edge {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-cc-visa {
   color: #1a1f71;
   cursor: pointer;
   height: 45px;
-  transition: all 2s ease-in-out;
 }
 body .sponsership-logo-and-more .fa-cc-visa:hover {
   animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation-name: visa;
-}
-@keyframes visa {
-  0% {
-    box-shadow: 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    box-shadow: -1px 1px #ffffff, -2px 2px #ffffff, -3px 3px #ffffff, -4px 4px #ffffff, -5px 5px #ffffff, -6px 6px #ffffff, -7px 7px #ffffff, -8px 8px #ffffff;
-    transform: translateX(8px) translateY(-8px);
-  }
 }
 body .sponsership-logo-and-more .fa-bandcamp {
   color: #629aa9;
@@ -712,15 +597,6 @@ body .sponsership-logo-and-more .fa-bandcamp {
 }
 body .sponsership-logo-and-more .fa-bandcamp:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: bandcamp;
-}
-@keyframes bandcamp {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-dropbox {
   color: #3d9ae8;
@@ -729,15 +605,6 @@ body .sponsership-logo-and-more .fa-dropbox {
 }
 body .sponsership-logo-and-more .fa-dropbox:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: dropbox;
-}
-@keyframes dropbox {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-telegram {
   color: #229ed9;
@@ -746,15 +613,6 @@ body .sponsership-logo-and-more .fa-telegram {
 }
 body .sponsership-logo-and-more .fa-telegram:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: telegram;
-}
-@keyframes telegram {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-firefox {
   color: #e66000;
@@ -763,15 +621,6 @@ body .sponsership-logo-and-more .fa-firefox {
 }
 body .sponsership-logo-and-more .fa-firefox:hover {
   animation: rotate-center 0.6s ease-in-out both;
-  animation-name: firefox;
-}
-@keyframes firefox {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 body .sponsership-logo-and-more .fa-cc-paypal {
   color: #3b7bbf;
@@ -780,17 +629,6 @@ body .sponsership-logo-and-more .fa-cc-paypal {
 }
 body .sponsership-logo-and-more .fa-cc-paypal:hover {
   animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation-name: paypal;
-}
-@keyframes paypal {
-  0% {
-    box-shadow: 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff, 0 0 #ffffff;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    box-shadow: -1px 1px #ffffff, -2px 2px #ffffff, -3px 3px #ffffff, -4px 4px #ffffff, -5px 5px #ffffff, -6px 6px #ffffff, -7px 7px #ffffff, -8px 8px #ffffff;
-    transform: translateX(8px) translateY(-8px);
-  }
 }
 body .sponsership-logo-and-more .fa-instagram {
   color: #a62eb8;
@@ -799,25 +637,9 @@ body .sponsership-logo-and-more .fa-instagram {
 }
 body .sponsership-logo-and-more .fa-instagram:hover {
   animation: rotate-scale-up-diag-2 0.7s linear both;
-  animation-name: instagram;
-}
-@keyframes instagram {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0);
-    transform: scale(1) rotateZ(0);
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotateZ(180deg);
-    transform: scale(0.5) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-    transform: scale(1) rotateZ(360deg);
-  }
 }
 body .growth-bussiness-section {
   background-color: #f0f0f0;
-  /* margin-top: -165px; */
   border-radius: 40px;
   padding-bottom: 80px;
   /* ------------------------------------------------------How-growth-business-container-trofy-and-like-container---------------------------------------------- */
@@ -902,18 +724,18 @@ body .growth-bussiness-section .How-growth-business-container .check-icon-text-n
   margin-top: 0px;
 }
 body .growth-bussiness-section .How-growth-business-container .Send-Me-a-Proposal-📄-button {
-  height: 45px;
-  width: 200px;
-  border-radius: 8px;
+  padding: 15px;
+  font-size: 15px;
   border: 0px;
-  line-height: 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
   background-color: #5134ff;
   color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 40px;
+  width: 200px;
+  margin-top: 35px;
 }
-body .growth-bussiness-section .How-growth-business-container .Send-Me-a-Proposal-📄-button .Send-Me-a-Proposal-📄-button:hover {
+body .growth-bussiness-section .How-growth-business-container .Send-Me-a-Proposal-📄-button:hover {
   cursor: pointer;
   background-color: #222222;
   color: #5134ff;
@@ -925,9 +747,7 @@ body .growth-bussiness-section .How-growth-business-container-trofy-and-like-con
   padding-left: 120px;
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex: 1;
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy {
   height: 60px;
@@ -941,17 +761,6 @@ body .growth-bussiness-section .How-growth-business-container-trofy-and-like-con
   background-color: #222222;
   cursor: pointer;
   animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation-name: trofy;
-}
-@keyframes trofy {
-  0% {
-    box-shadow: 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    box-shadow: -1px 1px #f0f0f0, -2px 2px #f0f0f0, -3px 3px #f0f0f0, -4px 4px #f0f0f0, -5px 5px #f0f0f0, -6px 6px #f0f0f0, -7px 7px #f0f0f0, -8px 8px #f0f0f0;
-    transform: translateX(0px) translateY(-15px);
-  }
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy-container-title {
   margin: 0px;
@@ -967,9 +776,7 @@ body .growth-bussiness-section .How-growth-business-container-trofy-and-like-con
   color: #a1a1a1;
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex: 1;
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done {
   height: 60px;
@@ -979,21 +786,10 @@ body .growth-bussiness-section .How-growth-business-container-trofy-and-like-con
   background-color: #ffffff;
   font-size: 23px;
 }
-body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done .hand-like-done:hover {
+body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done:hover {
   background-color: #222222;
   cursor: pointer;
   animation: shadow-pop-bl 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation-name: like;
-}
-@keyframes like {
-  0% {
-    box-shadow: 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0, 0 0 #f0f0f0;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    box-shadow: -1px 1px #f0f0f0, -2px 2px #f0f0f0, -3px 3px #f0f0f0, -4px 4px #f0f0f0, -5px 5px #f0f0f0, -6px 6px #f0f0f0, -7px 7px #f0f0f0, -8px 8px #f0f0f0;
-    transform: translateX(0px) translateY(-15px);
-  }
 }
 body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done-container-title {
   margin: 0px;
@@ -1056,26 +852,6 @@ body .By-the-numbers-section .by-the-number-section-no-2 .by-the-number-section-
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper {
   display: flex;
   flex-direction: row;
-  /* margin-top:25px; */
-}
-body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .graph-container-wrapper:hover {
-  animation: graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  opacity: 1;
-  cursor: pointer;
-}
-@keyframes first-graph-container {
-  0% {
-    -webkit-transform: scaleY(0.4);
-    transform: scaleY(0.4);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .first-graph-container {
   height: 260px;
@@ -1088,31 +864,17 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   opacity: 0;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .first-graph-container:hover {
-  animation: first-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   opacity: 1;
   cursor: pointer;
-}
-@keyframes first-graph-container {
-  0% {
-    -webkit-transform: scaleY(0.4);
-    transform: scaleY(0.4);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .second-graph-container {
   height: 360px;
   width: 90px;
-  background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 50px;
+  background-color: #f3f3f3;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .third-graph-container {
   height: 110px;
@@ -1125,32 +887,18 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   opacity: 0;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .third-graph-container:hover {
-  animation: third-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   opacity: 1;
   cursor: pointer;
 }
-@keyframes third-graph-container {
-  0% {
-    -webkit-transform: scaleY(0.4);
-    transform: scaleY(0.4);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-}
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fourth-graph-container {
-  left: 30px;
   height: 360px;
   width: 90px;
-  background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 50px;
+  background-color: #f3f3f3;
+  left: 30px;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fifth-graph-container {
   height: 320px;
@@ -1163,32 +911,18 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   opacity: 0;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fifth-graph-container:hover {
-  animation: fifth-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   opacity: 1;
   cursor: pointer;
 }
-@keyframes fifth-graph-container {
-  0% {
-    -webkit-transform: scaleY(0.4);
-    transform: scaleY(0.4);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-}
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .sixth-graph-container {
-  left: 60px;
   height: 360px;
   width: 90px;
-  background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 50px;
+  background-color: #f3f3f3;
+  left: 60px;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .seventh-graph-container {
   height: 210px;
@@ -1201,32 +935,18 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   opacity: 0;
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .seventh-graph-container:hover {
-  animation: seventh-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   opacity: 1;
   cursor: pointer;
-}
-@keyframes seventh-graph-container {
-  0% {
-    -webkit-transform: scaleY(0.4);
-    transform: scaleY(0.4);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .eigthth-graph-container {
   left: 90px;
   height: 360px;
   width: 90px;
-  background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 50px;
+  background-color: #f3f3f3;
 }
 body .by-the-number-section-no-3 {
   display: flex;
@@ -1248,7 +968,7 @@ body .by-the-number-section-no-3 .by-the-number-section-no-3-send-me-proposal-bu
   font-weight: 600;
   margin-top: 15px;
 }
-body .by-the-number-section-no-3 .by-the-number-section-no-3-send-me-proposal-button .by-the-number-section-no-3-send-me-proposal-button:hover {
+body .by-the-number-section-no-3 .by-the-number-section-no-3-send-me-proposal-button:hover {
   cursor: pointer;
   background-color: #222222;
   color: #5134ff;
@@ -1314,13 +1034,13 @@ body footer .footer-section .navmenu-footer .footer-icon .fa-twitter {
 body footer .footer-section .navmenu-footer .footer-icon .fa-youtube-play {
   color: #a1a1a1;
 }
-body footer .footer-section .navmenu-footer .fa-snowflake-o footer:hover {
-  transform: rotate(360deg);
-  cursor: pointer;
-}
 body footer .footer-section .navmenu-footer .footer-icon i:hover {
   color: #ffffff;
   cursor: pointer;
+}
+body footer .footer-section .navmenu-footer .fa-snowflake-o:hover {
+  cursor: pointer;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 body footer .footer-section .footer-ul-li-wrapper {
   margin-top: 30px;
@@ -1343,11 +1063,11 @@ body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer ul {
   padding: 0;
 }
 body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer ul li {
-  color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
   list-style: none;
   font-weight: 500;
+  color: #cbcbcb;
 }
 body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer .digital-marketing-footer-text {
   font-size: 17px;
@@ -1372,11 +1092,11 @@ body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer ul 
   padding: 0;
 }
 body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer ul li {
-  color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
   list-style: none;
   font-weight: 500;
+  color: #cbcbcb;
 }
 body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer-text {
   font-size: 17px;
@@ -1405,11 +1125,11 @@ body footer .footer-section .footer-ul-li-wrapper .Branding-footer ul {
   padding: 0;
 }
 body footer .footer-section .footer-ul-li-wrapper .Branding-footer ul li {
-  color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
   list-style: none;
   font-weight: 500;
+  color: #cbcbcb;
 }
 body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer li:hover {
   color: #ffffff;
@@ -1434,11 +1154,11 @@ body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer ul {
   padding: 0;
 }
 body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer ul li {
-  color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
   list-style: none;
   font-weight: 500;
+  color: #cbcbcb;
 }
 body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer li:hover {
   color: #ffffff;
@@ -1463,11 +1183,11 @@ body footer .footer-section .footer-ul-li-wrapper .Creative-footer ul {
   padding: 0;
 }
 body footer .footer-section .footer-ul-li-wrapper .Creative-footer ul li {
-  color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
   list-style: none;
   font-weight: 500;
+  color: #cbcbcb;
 }
 body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer li:hover {
   color: #ffffff;
@@ -1508,6 +1228,603 @@ body footer .footer-section .copy-right-section ul li {
 body footer .footer-section .copy-right-section ul li:hover {
   color: #ffffff;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* -----------------------------------------------------------nav-------------------------------------- */
+  body {
+    /* -------------------------------------------------------hero-header---------------------------------------------- */
+    /* -------------------------------------------------images-hero-section-------------------------------------------- */
+    /* ------------------------------------------------Digital-marketing-section-----------------------------------------*/
+    /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+    /* ---------------------------------------sponsership-logo-section----------------------------------- */
+    /*-------------------------------------------------how-to-growth-your-bussiness-section------------------------------------------*/
+    /* ---------------------------------------by-the-number-section-no-1-------------------------------------------------------------------- */
+    /* ---------------------------------------by-the-number-section-no-3-------------------------------------------------------------------- */
+    /* ------------------------------------------------footer---------------------------------------------- */
+  }
+  body nav .nav-bar .hamburger-icon {
+    display: block;
+  }
+  body nav .nav-bar .hamburger-icon .fa-bars {
+    display: block;
+    font-size: 30px;
+    color: #5134ff;
+  }
+  body nav .nav-bar .navbar {
+    display: none;
+  }
+  body .hero-header {
+    padding: 150px 117px 0px;
+  }
+  body .hero-header .lines-wrapper {
+    left: 201px;
+    bottom: 35px;
+  }
+  body .hero-header .hero-header-title {
+    font-size: 38px;
+  }
+  body .hero-photo-section {
+    margin-left: 0px;
+  }
+  body .hero-photo-section .hero-photo-section-image-no-1,
+body .hero-photo-section .hero-photo-section-image-no-2,
+body .hero-photo-section .hero-photo-section-image-no-3,
+body .hero-photo-section .hero-photo-section-image-no-4 {
+    height: 300px;
+    width: 166px;
+  }
+  body .Digital-marketing-section {
+    margin-top: 0px;
+    padding-left: 15px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph {
+    font-size: 38px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph .Digital-marketing-Branding-text {
+    margin: 0px;
+    font-size: 0px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph .Digital-marketing-Social-Ads-text {
+    margin: 0px;
+    font-size: 0px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph .Digital-marketing-subtitle-Digital-marketing-text {
+    font-size: 38px;
+  }
+  body .Digital-marketing-containers-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 20px;
+  }
+  body .Digital-marketing-containers-wrapper .earning-traffic-container {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  body .Digital-marketing-containers-wrapper .earning-traffic-container .Earning-traffic-sub-title {
+    width: inherit;
+  }
+  body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container {
+    width: inherit;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container .Designs-that-dazzels-sub-title {
+    width: inherit;
+  }
+  body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container .Expand-your-social-reach-sub-title {
+    width: auto;
+  }
+  body .sponsership-logo-and-more {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--off-white);
+    border-radius: 40px;
+  }
+  body .sponsership-logo-and-more .sponsership-section-title-and-subtitle .seven-hundred-plus-text {
+    padding-left: 0px;
+    font-size: 200px;
+  }
+  body .sponsership-logo-and-more .sponsership-section-title-and-subtitle .Brands-already-onboard-text {
+    padding-left: 0px;
+    font-size: 45px;
+  }
+  body .sponsership-logo-and-more .sponsership-logo {
+    margin-top: 50px;
+    font-size: 50px;
+    gap: 98px;
+  }
+  body .growth-bussiness-section {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  body .growth-bussiness-section .How-growth-business-container {
+    padding: 0px;
+    justify-content: center;
+    padding: 30px 20px;
+    margin: 0px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-title {
+    font-size: 25px;
+    width: inherit;
+  }
+  body .growth-bussiness-section .How-growth-business-container .metting-room-image {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 0px; */
+    padding-left: 40px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .trofy-container-title,
+body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .hand-like-done-container-title {
+    font-size: 25px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-1 {
+    font-size: 15px;
+    line-height: 21px;
+    color: #222222;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-2 {
+    font-size: 15px;
+    line-height: 21px;
+    color: #222222;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-3 {
+    font-size: 15px;
+    line-height: 21px;
+    color: #222222;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-4 {
+    font-size: 15px;
+    line-height: 21px;
+    width: 310px;
+    color: var(--black);
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .Send-Me-a-Proposal-📄-button {
+    margin-top: 40px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container {
+    display: flex;
+    padding: 0 20px 0 20px;
+    gap: 30px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section {
+    padding: 0 0;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy-container-para {
+    width: auto;
+    font-size: 15px;
+    flex: 1;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section {
+    padding: 0 0;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done-container-para {
+    width: auto;
+    font-size: 15px;
+    flex: 1;
+  }
+  body .By-the-numbers-section {
+    padding: 150px 20px 0 20px;
+    gap: 20px;
+    /* ---------------------------------------by-the-number-section-no-2-------------------------------------------------------------------- */
+  }
+  body .By-the-numbers-section .by-the-number-section-no-1 {
+    flex: 1;
+    padding-left: 0px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-1 .by-the-number-section-no-1-para {
+    font-size: 18px;
+    width: auto;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-1 .ninety-percnt-text {
+    font-size: 150px;
+    margin: 0px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-1 .by-the-number-text {
+    font-size: 30px;
+    margin: 0px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 {
+    padding: 0px;
+    flex: 1;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .by-the-number-section-no-2-para {
+    font-size: 18px;
+    width: auto;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper {
+    flex: 1;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .first-graph-container {
+    width: 60px;
+    height: 160px;
+    top: 55px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .second-graph-container {
+    width: 60px;
+    height: 215px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .third-graph-container {
+    width: 60px;
+    height: 75px;
+    top: 140px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fourth-graph-container {
+    width: 60px;
+    height: 215px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fifth-graph-container {
+    width: 60px;
+    height: 180px;
+    top: 35px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .sixth-graph-container {
+    width: 60px;
+    height: 215px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .seventh-graph-container {
+    width: 60px;
+    height: 160px;
+    top: 55px;
+  }
+  body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .eigthth-graph-container {
+    width: 60px;
+    height: 215px;
+  }
+  body .by-the-number-section-no-3 {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 20px 0 20px;
+    gap: 63px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    gap: 130px;
+    margin: 0;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-introduction {
+    padding-left: 0px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-introduction .by-the-number-section-no-3-introduction-para {
+    flex: 1;
+    font-size: 16px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-send-me-proposal-button {
+    margin: 80px 0 0 0;
+  }
+  body footer .footer-section .navmenu-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 20px;
+  }
+  body footer .footer-section .navmenu-footer .footer-icon {
+    margin: 0px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 75px;
+    gap: 20px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper ul {
+    display: none;
+  }
+  body footer .footer-section .footer-hr {
+    margin-top: 30px;
+    width: 600px;
+    background-color: var(--dark-grey);
+    height: 1px;
+    border: 0;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* ----------------------------------------------nav--------------------------------------- */
+  body {
+    /* -----------------------------------------hero-header------------------------------ */
+    /* --------------------------------------------Digital-marketing-section------------------------ */
+    /* --------------------------------------------------sponsership-logo-and-more------------------------------------ */
+    /* -------------------------------------how-to-growth-your-bussiness-section--------------------------------- */
+    /* -----------------------------------------------graph-section-------------------------------------- */
+    /* -------------------------------footer------------------------ */
+  }
+  body nav .nav-bar .hamburger-icon .fa-bars {
+    font-size: 20px;
+  }
+  body nav .nav-bar .logo .fa-snowflake-o {
+    font-size: 25px;
+  }
+  body nav .nav-bar .logo .logo p {
+    display: none;
+  }
+  body nav .nav-bar div .nav-button-Get-in-touch {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    /* margin-top: 10px; */
+    border-radius: 5px;
+  }
+  body nav .nav-bar div .nav-button-Get-in-touch .hi-1 {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  body .hero-header {
+    padding: 100px 40px 50px;
+  }
+  body .hero-header .lines-wrapper {
+    display: flex;
+    position: relative;
+    left: 290px;
+    bottom: 30px;
+    width: 0px;
+  }
+  body .hero-header .hero-header-title {
+    font-size: 17px;
+  }
+  body .hero-header .hero-header-Get-in-touch-button {
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 25px;
+    border-radius: 5px;
+  }
+  body .hero-header .hero-header-Get-in-touch-button .hi {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  body .hero-photo-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 709px;
+    gap: 0px;
+  }
+  body .hero-photo-section .hero-photo-section-image-no-1,
+body .hero-photo-section .hero-photo-section-image-no-2,
+body .hero-photo-section .hero-photo-section-image-no-3,
+body .hero-photo-section .hero-photo-section-image-no-4 {
+    margin: 0;
+    width: 166px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph {
+    font-size: 26px;
+  }
+  body .Digital-marketing-section .Digital-marketing-subtitle-paragraph .Digital-marketing-subtitle-Digital-marketing-text {
+    font-size: 26px;
+  }
+  body .Digital-marketing-containers-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .Digital-marketing-containers-wrapper .earning-traffic-container .Earning-traffic-title {
+    font-size: 22px;
+  }
+  body .Digital-marketing-containers-wrapper .earning-traffic-container .Earning-traffic-sub-title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container .Designs-that-dazzels-container {
+    margin: 0px;
+  }
+  body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container .Designs-that-dazzels-title {
+    font-size: 22px;
+  }
+  body .Digital-marketing-containers-wrapper .Designs-that-dazzels-container .Designs-that-dazzels-sub-title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container .Expand-your-social-reach-container {
+    margin: 0px;
+  }
+  body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container .Expand-your-social-reach-title {
+    font-size: 22px;
+  }
+  body .Digital-marketing-containers-wrapper .Expand-your-social-reach-container .Expand-your-social-reach-sub-title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  body .Digital-marketing-containers-wrapper .Digital-marketing-containers-wrapper a {
+    font-size: 18px;
+  }
+  body .Digital-marketing-containers-wrapper .Send-Me-a-Proposal-📄-button {
+    height: 40px;
+    width: 220px;
+    font-size: 17px;
+    margin-top: 0px;
+  }
+  body .sponsership-logo-and-more .sponsership-section-title-and-subtitle .seven-hundred-plus-text {
+    font-size: 100px;
+  }
+  body .sponsership-logo-and-more .sponsership-section-title-and-subtitle .Brands-already-onboard-text {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  body .sponsership-logo-and-more .sponsership-logo {
+    font-size: 28px;
+    margin-top: 50px;
+    gap: 37px;
+    padding: 0;
+  }
+  body .growth-bussiness-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .growth-bussiness-section .How-growth-business-container {
+    display: flex;
+    flex-direction: column;
+  }
+  body .growth-bussiness-section .How-growth-business-container .metting-room-image {
+    margin: 50px 0px;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation {
+    padding-left: 0px;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .How-growth-business-container-title {
+    font-size: 20px;
+    margin: 0;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-1 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-2 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-3 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  body .growth-bussiness-section .How-growth-business-container .How-growth-business-container-infromation .check-icon-text-no-4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container {
+    display: block;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section {
+    width: inherit;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy {
+    height: 55px;
+    width: 50px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy-container-title {
+    font-size: 20px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .troffy-section .trofy-container-para {
+    font-size: 12px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section {
+    width: inherit;
+    padding: 20px 0 0 0;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done {
+    height: 55px;
+    width: 50px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done-container-title {
+    font-size: 20px;
+  }
+  body .growth-bussiness-section .How-growth-business-container-trofy-and-like-container .hand-like-done-section .hand-like-done-container-para {
+    font-size: 12px;
+  }
+  body .by-the-number-section-no-1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  body .By-the-numbers-section {
+    display: flex;
+    flex-direction: column;
+  }
+  body .by-the-number-section-no-3 {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0 0 0;
+    gap: 25px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-title {
+    font-size: 22px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-introduction {
+    padding: 0px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-introduction .by-the-number-section-no-3-introduction-para {
+    font-size: 12px;
+  }
+  body .by-the-number-section-no-3 .by-the-number-section-no-3-send-me-proposal-button {
+    font-size: 15px;
+    margin: 10px 0 0 0;
+  }
+  body footer .footer-section .navmenu-footer .logo-footer .fa-snowflake-o {
+    font-size: 24px;
+  }
+  body footer .footer-section .navmenu-footer .logo-footer .logo-text-footer {
+    margin-left: 10px;
+    margin: 0px;
+    font-size: 22px;
+  }
+  body footer .footer-section .navmenu-footer .footer-icon {
+    margin: 0px;
+    font-size: 14px;
+  }
+  body footer .footer-section .navmenu-footer .footer-icon i {
+    margin-right: 10px;
+    color: var(--dark-grey);
+    margin-top: 10px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper {
+    display: flex;
+    margin: 0px 25px;
+    flex-direction: column;
+    gap: 10px;
+    height: 90px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer,
+body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer,
+body footer .footer-section .footer-ul-li-wrapper .Branding-footer,
+body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer,
+body footer .footer-section .footer-ul-li-wrapper .Creative-footer {
+    font-size: 14px;
+  }
+  body footer .footer-section .footer-hr {
+    margin-top: 10px;
+    width: 360px;
+    background-color: #a1a1a1;
+    height: 1px;
+    border: 0;
+  }
+  body footer .footer-section .copy-right-section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body footer .footer-section .copy-right-section .copy-right-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  body footer .footer-section .copy-right-section .copy-right-section ul {
+    margin: 0px;
+  }
+  body footer .footer-section .copy-right-section .copy-right-section ul .copy-right-section li {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,330 @@
+// * -----------------------------------------phone------------------------------------------------------ */
+@media only screen and (max-width: 420px) {
+  /* ----------------------------------------------nav--------------------------------------- */
+  body {
+    nav {
+      .nav-bar {
+        .hamburger-icon {
+          .fa-bars {
+            font-size: 20px;
+          }
+        }
+        .logo {
+          .fa-snowflake-o {
+            font-size: 25px;
+          }
+          .logo p {
+            display: none;
+          }
+        }
+        div {
+          .nav-button-Get-in-touch {
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            /* margin-top: 10px; */
+            border-radius: 5px;
+            .hi-1 {
+              font-size: 10px;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    /* -----------------------------------------hero-header------------------------------ */
+    .hero-header {
+      padding: 100px 40px 50px;
+
+      .lines-wrapper {
+        display: flex;
+        position: relative;
+        left: 290px;
+        bottom: 30px;
+        width: 0px;
+      }
+      .hero-header-title {
+        font-size: 17px;
+      }
+      .hero-header-Get-in-touch-button {
+        padding: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 25px;
+        border-radius: 5px;
+        .hi {
+          font-size: 10px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .hero-photo-section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      height: 709px;
+      gap: 0px;
+
+      .hero-photo-section-image-no-1,
+      .hero-photo-section-image-no-2,
+      .hero-photo-section-image-no-3,
+      .hero-photo-section-image-no-4 {
+        margin: 0;
+        width: 166px;
+      }
+    }
+    /* --------------------------------------------Digital-marketing-section------------------------ */
+    .Digital-marketing-section {
+      .Digital-marketing-subtitle-paragraph {
+        font-size: 26px;
+
+        .Digital-marketing-subtitle-Digital-marketing-text {
+          font-size: 26px;
+        }
+      }
+    }
+    .Digital-marketing-containers-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .earning-traffic-container {
+        .Earning-traffic-title {
+          font-size: 22px;
+        }
+        .Earning-traffic-sub-title {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+      .Designs-that-dazzels-container {
+        .Designs-that-dazzels-container {
+          margin: 0px;
+        }
+        .Designs-that-dazzels-title {
+          font-size: 22px;
+        }
+        .Designs-that-dazzels-sub-title {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+      .Expand-your-social-reach-container {
+        .Expand-your-social-reach-container {
+          margin: 0px;
+        }
+        .Expand-your-social-reach-title {
+          font-size: 22px;
+        }
+        .Expand-your-social-reach-sub-title {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+      .Digital-marketing-containers-wrapper a {
+        font-size: 18px;
+      }
+      .Send-Me-a-Proposal-📄-button {
+        height: 40px;
+        width: 220px;
+        font-size: 17px;
+        margin-top: 0px;
+      }
+    }
+    /* --------------------------------------------------sponsership-logo-and-more------------------------------------ */
+    .sponsership-logo-and-more {
+      .sponsership-section-title-and-subtitle {
+        .seven-hundred-plus-text {
+          font-size: 100px;
+        }
+        .Brands-already-onboard-text {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+      .sponsership-logo {
+        font-size: 28px;
+        margin-top: 50px;
+        gap: 37px;
+        padding: 0;
+      }
+    }
+    /* -------------------------------------how-to-growth-your-bussiness-section--------------------------------- */
+    .growth-bussiness-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .How-growth-business-container {
+        display: flex;
+        flex-direction: column;
+
+        .metting-room-image {
+          margin: 50px 0px;
+          height: 300px;
+          width: 100%;
+          border-radius: 10px;
+        }
+        .How-growth-business-container-infromation {
+          padding-left: 0px;
+
+          .How-growth-business-container-title {
+            font-size: 20px;
+            margin: 0;
+          }
+          .check-icon-text-no-1 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          .check-icon-text-no-2 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          .check-icon-text-no-3 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          .check-icon-text-no-4 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .How-growth-business-container-trofy-and-like-container {
+        display: block;
+        .troffy-section {
+          width: inherit;
+          .trofy {
+            height: 55px;
+            width: 50px;
+          }
+
+          .trofy-container-title {
+            font-size: 20px;
+          }
+          .trofy-container-para {
+            font-size: 12px;
+          }
+        }
+        .hand-like-done-section {
+          width: inherit;
+          padding: 20px 0 0 0;
+          .hand-like-done {
+            height: 55px;
+            width: 50px;
+          }
+          .hand-like-done-container-title {
+            font-size: 20px;
+          }
+          .hand-like-done-container-para {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    /* -----------------------------------------------graph-section-------------------------------------- */
+    .by-the-number-section-no-1 {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+    }
+    .By-the-numbers-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .by-the-number-section-no-3 {
+      flex-direction: column;
+      align-items: center;
+      margin: 25px 0 0 0;
+      gap: 25px;
+
+      .by-the-number-section-no-3-title {
+        font-size: 22px;
+      }
+      .by-the-number-section-no-3-introduction {
+        padding: 0px;
+
+        .by-the-number-section-no-3-introduction-para {
+          font-size: 12px;
+        }
+      }
+      .by-the-number-section-no-3-send-me-proposal-button {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+      }
+    }
+    /* -------------------------------footer------------------------ */
+    footer {
+      .footer-section {
+        .navmenu-footer {
+          .logo-footer {
+            .fa-snowflake-o {
+              font-size: 24px;
+            }
+            .logo-text-footer {
+              margin-left: 10px;
+              margin: 0px;
+              font-size: 22px;
+            }
+          }
+          .footer-icon {
+            margin: 0px;
+            font-size: 14px;
+          }
+          .footer-icon i {
+            margin-right: 10px;
+            color: var(--dark-grey);
+            margin-top: 10px;
+          }
+        }
+        .footer-ul-li-wrapper {
+          display: flex;
+          margin: 0px 25px;
+          flex-direction: column;
+          gap: 10px;
+          height: 90px;
+          margin-top: 50px;
+          margin-bottom: 20px;
+          .digital-marketing-footer,
+          .Website-devlopment-footer,
+          .Branding-footer,
+          .Socmed-marketing-footer,
+          .Creative-footer {
+            font-size: 14px;
+          }
+        }
+        .footer-hr {
+          margin-top: 10px;
+          width: 360px;
+          background-color: $dark-grey;
+          height: 1px;
+          border: 0;
+        }
+        .copy-right-section {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .copy-right-text {
+            margin: 0;
+            font-size: 13px;
+            line-height: 20px;
+          }
+          .copy-right-section ul {
+            margin: 0px;
+            .copy-right-section li {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

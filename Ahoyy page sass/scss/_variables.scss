@@ -1,15 +1,76 @@
-  $white: #ffffff;
-  $light-white: #f0f0f0;
-  $off-white: #f9f9f9;
-  $blue: #5134ff;
-  $dark-sky-blue: #5134ff;
-  $dark-grey: #a1a1a1;
-  $gray: #6a6a6a;
-  $white-gray: #cbcbcb;
-  $light-grey: #dcdcdc;
-  $gray: #c7c7c7;
-  $very-light-grey: #f3f3f3;
-  $black: #222222;
-  $orange: #ff782f;
-  $very-light-pink: #f5dbcc;
-  $light-cyan: #c3ebed;
+$white: #ffffff;
+$light-white: #f0f0f0;
+$off-white: #f9f9f9;
+$blue: #5134ff;
+$dark-sky-blue: #5134ff;
+$dark-grey: #a1a1a1;
+$gray: #6a6a6a;
+$white-gray: #cbcbcb;
+$light-grey: #dcdcdc;
+$gray: #c7c7c7;
+$very-light-grey: #f3f3f3;
+$black: #222222;
+$orange: #ff782f;
+$very-light-pink: #f5dbcc;
+$light-cyan: #c3ebed;
+
+
+
+
+// @mixin tablet-view{
+//   max-width: 768px;
+// }
+
+@mixin button {
+  padding: 15px;
+  font-size: 15px;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@mixin images {
+  height: 380px;
+  width: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@mixin imgaes-gradient {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%);
+  margin-top: -150px;
+  height: 200px;
+  width: 100%;
+  content: "";
+}
+
+@mixin Digital-marketing-containers-sub-title {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@mixin sponser-ship-logo {
+  cursor: pointer;
+  height: 45px;
+}
+@mixin gray-graph {
+  height: 360px;
+  width: 90px;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+  top: 50px;
+}
+
+@mixin footer-ul {
+  padding: 0;
+}
+@mixin footer-li {
+  line-height: 30px;
+  font-size: 16px;
+  list-style: none;
+  font-weight: 500;
+}

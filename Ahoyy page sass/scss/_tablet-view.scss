@@ -1,0 +1,350 @@
+@media (max-width: 768px) {
+  /* -----------------------------------------------------------nav-------------------------------------- */
+  body {
+    nav {
+      .nav-bar {
+        .hamburger-icon {
+          display: block;
+          .fa-bars {
+            display: block;
+            font-size: 30px;
+            color: $blue;
+          }
+        }
+        .navbar {
+          display: none;
+        }
+      }
+    }
+    /* -------------------------------------------------------hero-header---------------------------------------------- */
+
+    .hero-header {
+      padding: 150px 117px 0px;
+
+      .lines-wrapper {
+        left: 201px;
+        bottom: 35px;
+      }
+      .hero-header-title {
+        font-size: 38px;
+      }
+    }
+
+    /* -------------------------------------------------images-hero-section-------------------------------------------- */
+    .hero-photo-section {
+      margin-left: 0px;
+
+      .hero-photo-section-image-no-1,
+      .hero-photo-section-image-no-2,
+      .hero-photo-section-image-no-3,
+      .hero-photo-section-image-no-4 {
+        height: 300px;
+        width: 166px;
+      }
+    }
+    /* ------------------------------------------------Digital-marketing-section-----------------------------------------*/
+
+    .Digital-marketing-section {
+      margin-top: 0px;
+      padding-left: 15px;
+
+      .Digital-marketing-subtitle-paragraph {
+        font-size: 38px;
+
+        .Digital-marketing-Branding-text {
+          margin: 0px;
+          font-size: 0px;
+        }
+
+        .Digital-marketing-Social-Ads-text {
+          margin: 0px;
+          font-size: 0px;
+        }
+        .Digital-marketing-subtitle-Digital-marketing-text {
+          font-size: 38px;
+        }
+      }
+    }
+    /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+    .Digital-marketing-containers-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+      margin: 0 20px;
+
+      .earning-traffic-container {
+        flex-direction: column;
+        margin-top: 50px;
+
+        .Earning-traffic-sub-title {
+          width: inherit;
+        }
+      }
+
+      .Designs-that-dazzels-container {
+        width: inherit;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .Designs-that-dazzels-sub-title {
+          width: inherit;
+        }
+      }
+      .Expand-your-social-reach-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .Expand-your-social-reach-sub-title {
+          width: auto;
+        }
+      }
+    }
+    /* ---------------------------------------sponsership-logo-section----------------------------------- */
+    .sponsership-logo-and-more {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--off-white);
+      border-radius: 40px;
+      .sponsership-section-title-and-subtitle {
+        .seven-hundred-plus-text {
+          padding-left: 0px;
+          font-size: 200px;
+        }
+        .Brands-already-onboard-text {
+          padding-left: 0px;
+          font-size: 45px;
+        }
+      }
+      .sponsership-logo {
+        margin-top: 50px;
+        font-size: 50px;
+        gap: 98px;
+      }
+    }
+
+    /*-------------------------------------------------how-to-growth-your-bussiness-section------------------------------------------*/
+    .growth-bussiness-section {
+      margin-top: 50px;
+      padding-bottom: 50px;
+
+      .How-growth-business-container {
+        padding: 0px;
+        justify-content: center;
+        padding: 30px 20px;
+        margin: 0px;
+
+        .How-growth-business-container-title {
+          font-size: 25px;
+          width: inherit;
+        }
+        .metting-room-image {
+          height: 400px;
+          width: 400px;
+          object-fit: cover;
+          border-radius: 25px;
+        }
+        .How-growth-business-container-infromation {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          /* margin: 0px; */
+          padding-left: 40px;
+
+          .trofy-container-title,
+          .hand-like-done-container-title {
+            font-size: 25px;
+          }
+
+          .check-icon-text-no-1 {
+            font-size: 15px;
+            line-height: 21px;
+
+            color: $black;
+          }
+          .check-icon-text-no-2 {
+            font-size: 15px;
+            line-height: 21px;
+
+            color: $black;
+          }
+          .check-icon-text-no-3 {
+            font-size: 15px;
+            line-height: 21px;
+
+            color:$black;
+          }
+          .check-icon-text-no-4 {
+            font-size: 15px;
+            line-height: 21px;
+            width: 310px;
+            color: var(--black);
+          }
+          .Send-Me-a-Proposal-📄-button {
+            margin-top: 40px;
+          }
+        }
+      }
+      .How-growth-business-container-trofy-and-like-container {
+        display: flex;
+        padding: 0 20px 0 20px;
+        gap: 30px;
+
+        .troffy-section {
+          padding: 0 0;
+
+          .trofy-container-para {
+            width: auto;
+            font-size: 15px;
+            flex: 1;
+          }
+        }
+        .hand-like-done-section {
+          padding: 0 0;
+
+          .hand-like-done-container-para {
+            width: auto;
+            font-size: 15px;
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    /* ---------------------------------------by-the-number-section-no-1-------------------------------------------------------------------- */
+    .By-the-numbers-section {
+      padding: 150px 20px 0 20px;
+      gap: 20px;
+
+      .by-the-number-section-no-1 {
+        flex: 1;
+        padding-left: 0px;
+
+        .by-the-number-section-no-1-para {
+          font-size: 18px;
+          width: auto;
+        }
+        .ninety-percnt-text {
+          font-size: 150px;
+          margin: 0px;
+        }
+        .by-the-number-text {
+          font-size: 30px;
+          margin: 0px;
+        }
+      }
+      /* ---------------------------------------by-the-number-section-no-2-------------------------------------------------------------------- */
+
+      .by-the-number-section-no-2 {
+        padding: 0px;
+        flex: 1;
+        .by-the-number-section-no-2-para {
+          font-size: 18px;
+          width: auto;
+        }
+        .graph-container-wrapper {
+          flex: 1;
+
+          .first-graph-container {
+            width: 60px;
+            height: 160px;
+            top: 55px;
+          }
+          .second-graph-container {
+            width: 60px;
+            height: 215px;
+          }
+          .third-graph-container {
+            width: 60px;
+            height: 75px;
+            top: 140px;
+          }
+          .fourth-graph-container {
+            width: 60px;
+            height: 215px;
+          }
+          .fifth-graph-container {
+            width: 60px;
+            height: 180px;
+            top: 35px;
+          }
+          .sixth-graph-container {
+            width: 60px;
+            height: 215px;
+          }
+          .seventh-graph-container {
+            width: 60px;
+            height: 160px;
+            top: 55px;
+          }
+          .eigthth-graph-container {
+            width: 60px;
+            height: 215px;
+          }
+        }
+      }
+    }
+    /* ---------------------------------------by-the-number-section-no-3-------------------------------------------------------------------- */
+
+    .by-the-number-section-no-3 {
+      display: flex;
+      flex-direction: row;
+      padding: 150px 20px 0 20px;
+      gap: 63px;
+
+      .by-the-number-section-no-3-title {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+        gap: 130px;
+        margin: 0;
+      }
+      .by-the-number-section-no-3-introduction {
+        padding-left: 0px;
+        .by-the-number-section-no-3-introduction-para {
+          flex: 1;
+          font-size: 16px;
+        }
+      }
+      .by-the-number-section-no-3-send-me-proposal-button {
+        margin: 80px 0 0 0;
+      }
+    }
+    /* ------------------------------------------------footer---------------------------------------------- */
+    footer {
+      .footer-section {
+        .navmenu-footer {
+          display: flex;
+          flex-direction: column;
+          margin: 0px;
+          padding: 0px;
+          padding-top: 20px;
+
+          .footer-icon {
+            margin: 0px;
+          }
+        }
+        .footer-ul-li-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+          height: 75px;
+          gap: 20px;
+        }
+        .footer-ul-li-wrapper ul {
+          display: none;
+        }
+        .footer-hr {
+          margin-top: 30px;
+          width: 600px;
+          background-color: var(--dark-grey);
+          height: 1px;
+          border: 0;
+        }
+      }
+    }
+  }
+}
