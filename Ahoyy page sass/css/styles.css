@@ -28,7 +28,7 @@ body {
   /* ---------------------------------------------------------By-the-numbers-section-------------------------------------------------------------- */
   /* -----------------------------------------------------------by-the-number-section-no-3----------------------------------------------- */
   /* ----------------------------------------------------------------footer-------------------------------------------- */
-  /* --------------------------------------------------PAGE-CSS-END-------------------------------------------- */
+  /* --------------------------------------------------PAGE-SCSS-END-------------------------------------------- */
 }
 body nav {
   width: 100%;
@@ -39,6 +39,7 @@ body nav {
   right: 0;
   position: fixed;
   z-index: 1;
+  border-bottom: 1px solid #c7c7c7;
 }
 body nav .nav-bar {
   /* width: 100%; */
@@ -47,8 +48,6 @@ body nav .nav-bar {
   justify-content: space-between;
   align-items: center;
   height: inherit;
-  border-bottom: 1px solid #c7c7c7;
-  border-radius: 20px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -404,6 +403,9 @@ body .Digital-marketing-containers-wrapper {
   display: flex;
   flex-direction: row;
   /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+}
+body .Digital-marketing-containers-wrapper a {
+  color: #5134ff;
 }
 body .Digital-marketing-containers-wrapper .earning-traffic-container {
   /* width: 180px; */
@@ -1010,6 +1012,7 @@ body .By-the-numbers-section {
   display: flex;
   flex-direction: row;
   padding: 100px;
+  gap: 100px;
   /*///// -----------------------------------------------------------by-the-number-section-no-1-------------------------------------------- ////*/
   /*///// -----------------------------------------------------------by-the-number-section-no-2-------------------------------------------- ////*/
 }
@@ -1055,6 +1058,25 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   flex-direction: row;
   /* margin-top:25px; */
 }
+body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .graph-container-wrapper:hover {
+  animation: graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes first-graph-container {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+}
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .first-graph-container {
   height: 260px;
   width: 90px;
@@ -1063,9 +1085,29 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   border: 0;
   position: absolute;
   top: 100px;
+  opacity: 0;
+}
+body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .first-graph-container:hover {
+  animation: first-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes first-graph-container {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .second-graph-container {
-  height: 310px;
+  height: 360px;
   width: 90px;
   background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
@@ -1080,10 +1122,30 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   border: 0;
   position: absolute;
   top: 250px;
+  opacity: 0;
+}
+body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .third-graph-container:hover {
+  animation: third-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes third-graph-container {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fourth-graph-container {
   left: 30px;
-  height: 310px;
+  height: 360px;
   width: 90px;
   background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
@@ -1098,10 +1160,30 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   border: 0;
   position: absolute;
   top: 40px;
+  opacity: 0;
+}
+body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .fifth-graph-container:hover {
+  animation: fifth-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes fifth-graph-container {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .sixth-graph-container {
   left: 60px;
-  height: 310px;
+  height: 360px;
   width: 90px;
   background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
@@ -1116,10 +1198,30 @@ body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrappe
   border: 0;
   position: absolute;
   top: 150px;
+  opacity: 0;
+}
+body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .seventh-graph-container:hover {
+  animation: seventh-graph-container 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes seventh-graph-container {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
 }
 body .By-the-numbers-section .by-the-number-section-no-2 .graph-container-wrapper .eigthth-graph-container {
   left: 90px;
-  height: 310px;
+  height: 360px;
   width: 90px;
   background-color: #f3f3f3;
   border-radius: 20px 20px 0px 0px;
@@ -1164,11 +1266,9 @@ body footer {
   width: 100%;
 }
 body footer .footer-section {
-  /* display: flex; */
   width: 100%;
-  /* flex-direction: column; */
-  /* margin-left:30px; */
   /* -------------------------------------------footer-ul-li-wrapper----------------------------------------------------- */
+  /* -------------------------------------------------------------copy-right-section------------------------------------------------ */
 }
 body footer .footer-section .navmenu-footer {
   display: flex;
@@ -1186,8 +1286,6 @@ body footer .footer-section .navmenu-footer .logo-footer .fa-snowflake-o {
   border-radius: 50%;
   color: #5134ff;
   font-size: 35px;
-  /* height:30px;
-  width:30px; */
   cursor: pointer;
   transition: all 1s ease-in-out;
 }
@@ -1200,12 +1298,10 @@ body footer .footer-section .navmenu-footer .logo-footer .logo-text-footer {
 body footer .footer-section .navmenu-footer .footer-icon {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   list-style: none;
   font-weight: 500;
   font-size: 18px;
   color: #cbcbcb;
-  margin-right: 110px;
 }
 body footer .footer-section .navmenu-footer .footer-icon i {
   margin-right: 15px;
@@ -1218,12 +1314,12 @@ body footer .footer-section .navmenu-footer .footer-icon .fa-twitter {
 body footer .footer-section .navmenu-footer .footer-icon .fa-youtube-play {
   color: #a1a1a1;
 }
-body footer .footer-section .navmenu-footer .footer-icon i:hover {
-  color: #ffffff;
-  cursor: pointer;
-}
 body footer .footer-section .navmenu-footer .fa-snowflake-o footer:hover {
   transform: rotate(360deg);
+  cursor: pointer;
+}
+body footer .footer-section .navmenu-footer .footer-icon i:hover {
+  color: #ffffff;
   cursor: pointer;
 }
 body footer .footer-section .footer-ul-li-wrapper {
@@ -1235,7 +1331,6 @@ body footer .footer-section .footer-ul-li-wrapper {
   /* --------------------------------------------------------------- */
   /* --------------------------------------------------------------- */
   /* --------------------------------------------------------------------------------------- */
-  /* -------------------------------------------------------------copy-right-section------------------------------------------------ */
 }
 body footer .footer-section .footer-ul-li-wrapper .digital-marketing-footer {
   color: white;
@@ -1273,6 +1368,16 @@ body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer {
   font-weight: 400;
   cursor: pointer;
 }
+body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer ul {
+  padding: 0;
+}
+body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer ul li {
+  color: #cbcbcb;
+  line-height: 30px;
+  font-size: 16px;
+  list-style: none;
+  font-weight: 500;
+}
 body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer-text {
   font-size: 17px;
   font-weight: 500;
@@ -1280,16 +1385,6 @@ body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .We
 body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer-text:hover {
   color: #c7c7c7;
   cursor: pointer;
-}
-body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer ul {
-  padding: 0;
-}
-body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer ul .Website-devlopment-footer li {
-  color: #cbcbcb;
-  line-height: 30px;
-  font-size: 16px;
-  list-style: none;
-  font-weight: 500;
 }
 body footer .footer-section .footer-ul-li-wrapper .Website-devlopment-footer .Website-devlopment-footer li:hover {
   color: #ffffff;
@@ -1306,14 +1401,10 @@ body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-foo
   font-size: 17px;
   font-weight: 500;
 }
-body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer-text:hover {
-  color: #c7c7c7;
-  cursor: pointer;
-}
-body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer ul {
+body footer .footer-section .footer-ul-li-wrapper .Branding-footer ul {
   padding: 0;
 }
-body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer ul .Branding-footer li {
+body footer .footer-section .footer-ul-li-wrapper .Branding-footer ul li {
   color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
@@ -1322,6 +1413,10 @@ body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-foo
 }
 body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer li:hover {
   color: #ffffff;
+  cursor: pointer;
+}
+body footer .footer-section .footer-ul-li-wrapper .Branding-footer .Branding-footer-text:hover {
+  color: #c7c7c7;
   cursor: pointer;
 }
 body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer {
@@ -1335,14 +1430,10 @@ body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socm
   font-size: 17px;
   font-weight: 500;
 }
-body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer-text:hover {
-  color: #c7c7c7;
-  cursor: pointer;
-}
-body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer ul {
+body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer ul {
   padding: 0;
 }
-body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer ul .Socmed-marketing-footer li {
+body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer ul li {
   color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
@@ -1351,6 +1442,10 @@ body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socm
 }
 body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer li:hover {
   color: #ffffff;
+  cursor: pointer;
+}
+body footer .footer-section .footer-ul-li-wrapper .Socmed-marketing-footer .Socmed-marketing-footer-text:hover {
+  color: #c7c7c7;
   cursor: pointer;
 }
 body footer .footer-section .footer-ul-li-wrapper .Creative-footer {
@@ -1364,14 +1459,10 @@ body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-foo
   font-size: 17px;
   font-weight: 500;
 }
-body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer-text:hover {
-  color: #c7c7c7;
-  cursor: pointer;
-}
-body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer ul {
+body footer .footer-section .footer-ul-li-wrapper .Creative-footer ul {
   padding: 0;
 }
-body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer ul .Creative-footer li {
+body footer .footer-section .footer-ul-li-wrapper .Creative-footer ul li {
   color: #cbcbcb;
   line-height: 30px;
   font-size: 16px;
@@ -1382,36 +1473,39 @@ body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-foo
   color: #ffffff;
   cursor: pointer;
 }
-body footer .footer-section .footer-ul-li-wrapper .footer-hr {
+body footer .footer-section .footer-ul-li-wrapper .Creative-footer .Creative-footer-text:hover {
+  color: #c7c7c7;
+  cursor: pointer;
+}
+body footer .footer-section .footer-hr {
   margin-top: 100px;
   width: 1200px;
   background-color: #a1a1a1;
   height: 1.1px;
   border: 0;
 }
-body footer .footer-section .footer-ul-li-wrapper .copy-right-section {
+body footer .footer-section .copy-right-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body footer .footer-section .footer-ul-li-wrapper .copy-right-section .copy-right-text {
+body footer .footer-section .copy-right-section .copy-right-text {
   display: flex;
   justify-content: center;
   font-size: 14px;
   color: #a1a1a1;
 }
-body footer .footer-section .footer-ul-li-wrapper .copy-right-section .copy-right-section ul {
+body footer .footer-section .copy-right-section ul {
   display: flex;
-  margin-right: 100px;
   padding: 0px;
 }
-body footer .footer-section .footer-ul-li-wrapper .copy-right-section .copy-right-section ul .copy-right-section li {
+body footer .footer-section .copy-right-section ul li {
   display: flex;
   color: #a1a1a1;
   font-size: 14px;
   padding: 0 10px;
 }
-body footer .footer-section .footer-ul-li-wrapper .copy-right-section li:hover {
+body footer .footer-section .copy-right-section ul li:hover {
   color: #ffffff;
   cursor: pointer;
 }
