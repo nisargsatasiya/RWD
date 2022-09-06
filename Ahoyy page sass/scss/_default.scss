@@ -9,7 +9,6 @@ html {
 .max-width-container {
   max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
 
 ::selection {
@@ -33,7 +32,7 @@ body {
     z-index: 1;
     border-bottom: 1px solid $gray;
     border-radius: 10px;
-
+    box-shadow: 5px 10px #888888;
     .nav-bar {
       display: flex;
       flex-direction: row;
