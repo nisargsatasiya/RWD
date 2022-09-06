@@ -1,0 +1,14 @@
+$background-mint: #0cae96;
+$white: #ffffff;
+$dark-yellow: #fdc92e;
+$medium-yellow: #d1bb30;
+$darkest-yellow: #815f00;
+$darkest-mint: #00957b;
+$light-yellow-black: #815f00;
+
+@mixin button {
+  font-family: "Nunito", sans-serif;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 60px;
+}

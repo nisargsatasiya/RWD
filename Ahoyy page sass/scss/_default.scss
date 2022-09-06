@@ -342,9 +342,6 @@ body {
       animation: slide-fwd-top 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
     }
 
-    .Earning-traffic-title {
-    }
-
     .Earning-traffic-sub-title {
       @include Digital-marketing-containers-sub-title;
       color: $dark-grey;
