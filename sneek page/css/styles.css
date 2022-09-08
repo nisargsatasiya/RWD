@@ -219,7 +219,7 @@ body section .arrow-down {
 }
 body section .explore-more-section-wrapper {
   background-color: #00957b;
-  border-radius: 50px;
+  border-radius: 120px;
 }
 body section .explore-more-section-wrapper .discover-your-fovorite-flavor-section-wrapper {
   position: relative;
@@ -587,11 +587,143 @@ body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wr
   color: #ffffff;
   text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
 }
+body section .explore-more-section-wrapper .what-they-say-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  flex-direction: column;
+  position: relative;
+}
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .what-they-say-container-title {
-  font-size: 70px;
+  text-align: center;
+  font-size: 55px;
   font-family: Modak, cursive;
   font-weight: 100;
   color: #ffffff;
+  line-height: 50px;
+  text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .what-they-say-container-sub-title {
+  margin-top: 30px;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .ceo-name {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .bonge-handsomeman-details {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+  font-size: 17px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01816d;
+  height: 220px;
+  width: 700px;
+  border-radius: 120px;
+  margin-top: 170px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-left-man-image {
+  height: 80px;
+  position: absolute;
+  left: 12%;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .man-image {
+  position: relative;
+  bottom: 35%;
+  height: 374px;
+  width: 300px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-right-man-image {
+  height: 80px;
+  position: absolute;
+  right: 12%;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper {
+  display: flex;
+  margin-top: 60px;
+  gap: 20px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-1 {
+  height: 30px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-2 {
+  height: 30px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-3 {
+  height: 30px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-4 {
+  height: 30px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-5 {
+  height: 30px;
+}
+body footer {
+  margin-top: 150px;
+}
+body footer .title-and-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .title-and-button-wrapper .footer-title {
+  font-family: Modak, cursive;
+  font-size: 55px;
+  font-weight: 100;
+  color: #ffffff;
+  text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
+}
+body footer .title-and-button-wrapper .try-now-button-footer {
+  font-family: "Nunito", sans-serif;
+  padding: 11px 20px;
+  border-radius: 50px;
+  margin-top: 60px;
+  background-color: #fdc92e;
+  padding: 0 100px;
+  border-radius: 100px;
+  border: 0;
+  color: #815f00;
+  font-size: 120px;
+  font-weight: 100;
+  font-family: Modak, cusive;
+}
+body footer .logo-footer {
+  font-family: "Modak", cursive;
+  font-size: 55px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 50px;
+}
+body footer .copy-right-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px 20px 100px;
+}
+body footer .copy-right-section .condition-text-footer {
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+}
+body footer .copy-right-section .riserved-text-footer {
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+}
+body footer .copy-right-section .footer-ul ul li {
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+  list-style: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -249,7 +249,7 @@ body {
     }
     .explore-more-section-wrapper {
       background-color: $darkest-mint;
-      border-radius: 50px;
+      border-radius: 120px;
 
       // discover-your-fovorite-flavor-section------------------------------------------------------------
       .discover-your-fovorite-flavor-section-wrapper {
@@ -672,11 +672,143 @@ body {
       }
       // what-they-say-container-wrapper----------------------------------------------
       .what-they-say-container-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        flex-direction: column;
+        position: relative;
         .what-they-say-container-title {
-          font-size: 70px;
+          text-align: center;
+          font-size: 55px;
           font-family: Modak, cursive;
           font-weight: 100;
           color: $white;
+          line-height: 50px;
+          text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+            -5px -5px 0 #01816d;
+        }
+        .what-they-say-container-sub-title {
+          margin-top: 30px;
+          font-family: "Nunito", sans-serif;
+          text-align: center;
+          color: $white;
+        }
+        .ceo-name {
+          margin-top: 50px;
+          text-align: center;
+          font-family: "Nunito", sans-serif;
+          color: $white;
+          font-size: 25px;
+        }
+        .bonge-handsomeman-details {
+          margin-top: 10px;
+          text-align: center;
+          font-family: "Nunito", sans-serif;
+          color: $white;
+          font-size: 17px;
+        }
+        .man-image-dark-mint-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $very-darkest-mint;
+          height: 220px;
+          width: 700px;
+          border-radius: 120px;
+          margin-top: 170px;
+          .arrow-left-man-image {
+            height: 80px;
+            position: absolute;
+            left: 12%;
+          }
+          .man-image {
+            position: relative;
+            bottom: 35%;
+            height: 374px;
+            width: 300px;
+          }
+          .arrow-right-man-image {
+            height: 80px;
+            position: absolute;
+            right: 12%;
+          }
+        }
+        .arrow-down-man-image-wrapper {
+          display: flex;
+          margin-top: 60px;
+          gap: 20px;
+          .arrow-down-man-image-1 {
+            height: 30px;
+          }
+          .arrow-down-man-image-2 {
+            height: 30px;
+          }
+          .arrow-down-man-image-3 {
+            height: 30px;
+          }
+          .arrow-down-man-image-4 {
+            height: 30px;
+          }
+          .arrow-down-man-image-5 {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    // border-radius: 120px;
+    margin-top: 150px;
+    .title-and-button-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .footer-title {
+        font-family: Modak, cursive;
+        font-size: 55px;
+        font-weight: 100;
+        color: $white;
+        text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+          -5px -5px 0 #01816d;
+      }
+      .try-now-button-footer {
+        @include button;
+        background-color: $dark-yellow;
+        padding: 0 100px;
+        border-radius: 100px;
+        border: 0;
+        color: $light-yellow-black;
+        font-size: 120px;
+        font-weight: 100;
+        font-family: Modak, cusive;
+      }
+    }
+    .logo-footer {
+      font-family: "Modak", cursive;
+      font-size: 55px;
+      color: $white;
+      cursor: pointer;
+      margin-top: 50px;
+    }
+    .copy-right-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 100px 20px 100px;
+      .condition-text-footer {
+        font-family: "Nunito", sans-serif;
+        color: $white;
+      }
+      .riserved-text-footer {
+        font-family: "Nunito", sans-serif;
+        color: $white;
+      }
+      .footer-ul ul {
+        li {
+          font-family: "Nunito", sans-serif;
+          color: $white;
+          list-style: none;
         }
       }
     }
