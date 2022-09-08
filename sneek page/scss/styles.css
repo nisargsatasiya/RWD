@@ -32,6 +32,7 @@ body nav .nav-bar-wrapper .logo {
   font-family: "Modak", cursive;
   font-size: 35px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 body nav .nav-bar-wrapper .nav-menu ul {
@@ -48,12 +49,18 @@ body nav .nav-bar-wrapper .nav-menu ul {
 
 body nav .nav-bar-wrapper .nav-menu li {
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+body nav .nav-bar-wrapper .nav-menu li:hover {
+  color: lightsteelblue;
+  cursor: pointer;
 }
 
 body nav .nav-bar-wrapper .locat-products-nav-bar {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #ffffff;
+  cursor: pointer;
 }
 
 body nav .nav-bar-wrapper .locat-products-nav-bar .fa-location-dot {
@@ -67,11 +74,18 @@ body header {
   padding: 120px 120px 0;
 }
 
+body header .header-swirl-subtitle {
+  position: absolute;
+  bottom: 140px;
+}
+
 body header .header-left-side {
+  position: relative;
   width: 50%;
 }
 
 body header .header-left-side .header-title {
+  position: relative;
   font-family: "Modak", cursive;
   color: #ffffff;
   font-size: 100px;
@@ -80,25 +94,199 @@ body header .header-left-side .header-title {
   line-height: 80px;
 }
 
+body header .header-left-side .header-subtitle {
+  position: relative;
+  padding: 50px 100px 0;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+body header .header-left-side .header-button-snacking-now {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  padding: 11px 20px;
+  border-radius: 50px;
+  margin-top: 60px;
+  border: 0;
+  background-color: #fdc92e;
+  color: #815f00;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+body header .header-left-side .header-button-snacking-now:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #fdc92e;
+  color: #fdc92e;
+  font-weight: 800;
+  font-size: 20px;
+  opacity: 0.8;
+  padding: 7px 18px;
+}
+
+body header .header-left-side .header-button-shop-in-ebay {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  padding: 11px 20px;
+  border-radius: 50px;
+  margin-top: 60px;
+  background: transparent;
+  border: 2px solid #fdc92e;
+  color: #fdc92e;
+  font-weight: 700;
+  font-size: 19px;
+  margin-left: 30px;
+  opacity: 0.8;
+}
+
+body header .header-left-side .header-button-shop-in-ebay:hover {
+  cursor: pointer;
+  border: 0;
+  background-color: #fdc92e;
+  color: #815f00;
+  font-weight: 700;
+  font-size: 19px;
+  opacity: 1;
+  padding: 13px 21px;
+}
+
 body header .header-right-side {
+  position: relative;
   width: 50%;
 }
 
-body header .header-right-side .header-dark-yellow-circle {
+body header .header-right-side .header-dark-mint-circle {
   position: relative;
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  background-color: #fdc92e;
+  background-color: #00957b;
 }
 
-body header .header-right-side .header-dark-mint-circle {
+body header .header-right-side .header-dark-yellow-circle {
   position: absolute;
-  top: 250px;
-  right: 100px;
-  height: 400px;
-  width: 400px;
+  top: 80px;
+  left: 68px;
+  height: 350px;
+  width: 350px;
   border-radius: 50%;
+  background-color: #fdc92e;
+  border: 5px solid #d1bb30;
+}
+
+body header .header-right-side .header-chips-packet-image {
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+  height: 430px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body section {
+  margin-top: 50px;
+}
+
+body section h3 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+body section .fa-caret-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fdc92e;
+  margin-top: 50px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper {
   background-color: #00957b;
+  border-radius: 120px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-family: "Modak", cursive;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 65px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .discover-your-fovorite-flavor-section-subtitle {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  margin-top: 40px;
+  font-size: 17px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .lays-chips-packets-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #01816d;
+  border-radius: 80px 80px 0 0;
+  margin: 125px 125px 0;
+  gap: 50px;
+  height: 300px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .lays-chips-packets-images-wrapper .section-image-1 {
+  height: 350px;
+  width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  bottom: 25px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .lays-chips-packets-images-wrapper .section-after-yellow-circle {
+  height: 300px;
+  width: 300px;
+  background-color: #fdc92e;
+  border: 5px solid #d1bb30;
+  border-radius: 50%;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .lays-chips-packets-images-wrapper .section-after-yellow-circle .section-image-2 {
+  position: relative;
+  left: 5px;
+  bottom: 75px;
+  height: 400px;
+  width: 290px;
+}
+
+body section .discover-your-fovorite-flavor-section-wrapper .lays-chips-packets-images-wrapper .section-image-3 {
+  height: 350px;
+  width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  bottom: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

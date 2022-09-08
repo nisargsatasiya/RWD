@@ -4,70 +4,112 @@
   margin: 0;
   padding: 0;
 }
+
 .max-width-container {
   max-width: 1200px;
   margin: 0 auto;
   // padding: 0 20px;
 }
+
 body {
   background-color: $background-mint;
+  // ---------------------------------------------navbar----------------------------------------------------/
 
   nav {
     padding: 30px 120px 0;
+
     .nav-bar-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .logo {
         font-family: "Modak", cursive;
         font-size: 35px;
         color: $white;
         cursor: pointer;
       }
+
+      .product-text-bottom-line {
+        position: absolute;
+        height: 60px;
+        top: 70px;
+        /* width: 100px; */
+        transform: rotate(280deg);
+      }
+
       .nav-menu ul {
         display: flex;
         flex-direction: row;
         gap: 100px;
         color: $white;
       }
+
       .nav-menu li {
         list-style: none;
         font-family: "Nunito", sans-serif;
       }
+
       .nav-menu li:hover {
         color: lightsteelblue;
         cursor: pointer;
       }
+
       .locat-products-nav-bar {
         font-family: "Nunito", sans-serif;
         color: $white;
         cursor: pointer;
+
         .fa-location-dot {
           color: $dark-yellow;
         }
       }
     }
   }
+
+  // ---------------------------------------------header----------------------------------------------------/
   header {
     display: flex;
     padding: 120px 120px 0;
+
+    .header-swirl-subtitle {
+      position: absolute;
+      top: 250px;
+    }
+
+    .patato-chips-images {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      height: 55px;
+    }
+
     .header-left-side {
+      position: relative;
       width: 50%;
+
       .header-title {
+        position: relative;
         font-family: "Modak", cursive;
         color: $white;
         font-size: 100px;
         font-weight: 100;
         width: 500px;
         line-height: 80px;
+        text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+          -5px -5px 0 #01816d;
       }
+
       .header-subtitle {
+        position: relative;
         padding: 50px 100px 0;
         color: $white;
         font-family: "Nunito", sans-serif;
         font-weight: 400;
       }
+
       .header-button-snacking-now {
+        position: relative;
         @include button;
         border: 0;
         background-color: $dark-yellow;
@@ -75,7 +117,20 @@ body {
         font-weight: 800;
         font-size: 20px;
       }
+
+      .header-button-snacking-now:hover {
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid $dark-yellow;
+        color: $dark-yellow;
+        font-weight: 800;
+        font-size: 20px;
+        opacity: 0.8;
+        padding: 7px 18px;
+      }
+
       .header-button-shop-in-ebay {
+        position: relative;
         @include button;
         background: transparent;
         border: 2px solid $dark-yellow;
@@ -85,9 +140,23 @@ body {
         margin-left: 30px;
         opacity: 0.8;
       }
+
+      .header-button-shop-in-ebay:hover {
+        cursor: pointer;
+        border: 0;
+        background-color: $dark-yellow;
+        color: $light-yellow-black;
+        font-weight: 700;
+        font-size: 19px;
+        opacity: 1;
+        padding: 13px 21px;
+      }
     }
+
     .header-right-side {
+      position: relative;
       width: 50%;
+
       .header-dark-mint-circle {
         position: relative;
         height: 500px;
@@ -95,51 +164,521 @@ body {
         border-radius: 50%;
         background-color: #00957b;
       }
+
       .header-dark-yellow-circle {
         position: absolute;
-        top: 275px;
-        right: 245px;
+        top: 80px;
+        left: 68px;
         height: 350px;
         width: 350px;
         border-radius: 50%;
         background-color: $dark-yellow;
         border: 5px solid $medium-yellow;
       }
+
+      .mint-leaf-header {
+        position: relative;
+        height: 150px;
+        width: 100px;
+        bottom: 305px;
+        right: 50px;
+        transform: rotate(-150deg);
+      }
+
       .header-chips-packet-image {
         position: absolute;
-        top: 220px;
-        right: 275px;
-        transform: rotate(15deg);
+        top: 25px;
+        left: 100px;
+        transform: rotate(12deg);
         height: 430px;
         width: 300px;
         object-fit: cover;
       }
+
+      .tomato-header-png {
+        height: 75px;
+        width: 75px;
+        top: 10px;
+        right: 115px;
+        position: absolute;
+      }
+
+      .tomato-slice {
+        position: absolute;
+        height: 75px;
+        width: 75px;
+        bottom: 170px;
+        left: 80px;
+        transform: rotate(75deg);
+      }
+
+      .three-patato-chips-header {
+        position: absolute;
+        top: 200px;
+        right: 0px;
+        height: 70px;
+      }
+
+      .patato-chips-images-2 {
+        position: absolute;
+        bottom: 200px;
+        right: 100px;
+        height: 45px;
+      }
     }
   }
+
+  // ---------------------------------------------section----------------------------------------------------/
   section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
+
     h3 {
       text-align: center;
       font-family: "Nunito", sans-serif;
       color: $white;
       font-weight: 500;
     }
-    span {
-      .fa-caret-down {
+
+    .arrow-down {
+      color: $dark-yellow;
+      height: 80px;
+    }
+    .explore-more-section-wrapper {
+      background-color: $darkest-mint;
+      border-radius: 50px;
+
+      // discover-your-fovorite-flavor-section------------------------------------------------------------
+      .discover-your-fovorite-flavor-section-wrapper {
+        position: relative;
+
+        h1 {
+          padding-top: 100px;
+          text-align: center;
+          font-family: "Modak", cursive;
+          color: $white;
+          font-size: 50px;
+          font-weight: 200;
+          line-height: 65px;
+          text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+            -5px -5px 0 #01816d;
+        }
+
+        .cheese-image {
+          position: absolute;
+          height: 200px;
+          top: 150px;
+          left: 100px;
+          transform: scaleX(-1) rotate(30deg);
+        }
+
+        .arrow-round {
+          position: absolute;
+          top: 230px;
+          left: 265px;
+          height: 100px;
+          transform: rotate(20deg);
+        }
+
+        .discover-your-fovorite-flavor-section-subtitle {
+          text-align: center;
+          color: $white;
+          font-family: "Nunito", sans-serif;
+          margin-top: 40px;
+          font-size: 17px;
+        }
+
+        .arrow-round-2 {
+          position: absolute;
+          top: 280px;
+          right: 280px;
+          height: 100px;
+          transform: rotate(-110deg);
+        }
+
+        .cheese-image-2 {
+          position: absolute;
+          height: 200px;
+          top: 100px;
+          right: 50px;
+          transform: scaleX(1) rotate(-30deg);
+        }
+      }
+
+      // /--------------------------------lays-chips-packets-images-wrapper------------------------------------/
+      .lays-chips-packets-images-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        color: $dark-yellow;
+        background-color: $very-darkest-mint;
+        border-radius: 80px 80px 0 0;
+        margin: 125px 125px 0;
+        gap: 50px;
+        height: 300px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .section-image-1 {
+          height: 350px;
+          width: 260px;
+          object-fit: cover;
+          position: relative;
+          bottom: 25px;
+        }
+
+        .section-after-yellow-circle {
+          height: 300px;
+          width: 300px;
+          background-color: $dark-yellow;
+          border: 5px solid $medium-yellow;
+          border-radius: 50%;
+
+          .section-image-2 {
+            position: relative;
+            left: 5px;
+            bottom: 75px;
+            height: 400px;
+            width: 290px;
+          }
+        }
+
+        .section-image-3 {
+          height: 350px;
+          width: 260px;
+          object-fit: cover;
+          position: relative;
+          bottom: 25px;
+        }
       }
-    }
-    h1 {
-      margin-top: 100px;
-      text-align: center;
-      font-family: "Modak", cursive;
-      color: $white;
-      font-size: 60px;
-      font-weight: 300;
+
+      // builing-simple-food-section---------------------------------------------------------
+      .builing-simple-food-section {
+        position: relative;
+        margin: 150px 0 60px;
+
+        .meat-image {
+          position: absolute;
+          height: 150px;
+          left: 19%;
+          bottom: 87%;
+          transform: rotate(-30deg);
+        }
+
+        .builing-simple-food-section-mint-leaf {
+          position: absolute;
+          height: 115px;
+          right: 22%;
+          bottom: 89%;
+          transform: rotate(-55deg);
+        }
+
+        .builing-simple-food-section-title {
+          position: relative;
+          text-align: center;
+          font-family: "Modak", cursive;
+          font-weight: 200;
+          color: $white;
+          font-size: 50px;
+          line-height: 55px;
+          text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+            -5px -5px 0 #01816d;
+        }
+
+        .half-circle-left-side {
+          position: absolute;
+          height: 250px;
+          text-shadow: 50px 50px $very-darkest-mint;
+          left: 45px;
+          top: 30%;
+        }
+
+        .arrow-left {
+          position: absolute;
+          height: 80px;
+          left: 175px;
+          top: 43%;
+          color: #007c69;
+        }
+
+        .half-circle-right-side {
+          position: absolute;
+          height: 250px;
+          right: 45px;
+          top: 30%;
+          transform: scaleX(-1);
+        }
+
+        .arrow-right {
+          position: absolute;
+          height: 80px;
+          right: 175px;
+          top: 43%;
+        }
+
+        .single-round-arrow-1 {
+          position: absolute;
+          height: 100px;
+          left: 245px;
+          bottom: 38%;
+          transform: rotate(130deg);
+        }
+
+        .builing-simple-food-section-subtitle {
+          margin: 40px 0 0;
+          text-align: center;
+          font-family: "Nunito", sans-serif;
+          color: $white;
+          line-height: 22px;
+        }
+
+        .single-round-arrow-2 {
+          position: absolute;
+          height: 100px;
+          right: 245px;
+          bottom: 38%;
+          transform: rotate(-50deg);
+        }
+
+        .burger-image {
+          position: absolute;
+          height: 150px;
+          left: 25%;
+          top: 50%;
+          transform: rotate(-35deg);
+        }
+
+        .meat-image-2 {
+          position: absolute;
+          height: 150px;
+          right: 28%;
+          top: 0px;
+          transform: scaleX(-1) rotate(-120deg);
+        }
+
+        .builing-simple-food-section-patato-chips-image {
+          position: absolute;
+          height: 55px;
+          top: 120px;
+          left: 29%;
+        }
+
+        .explor-more-button-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .explor-more-button {
+            position: relative;
+            border: 0;
+            background-color: $dark-yellow;
+            color: $light-yellow-black;
+            font-weight: 800;
+            font-size: 20px;
+            @include button;
+          }
+
+          .explor-more-button:hover {
+            cursor: pointer;
+            background: transparent;
+            border: 2px solid $dark-yellow;
+            color: $dark-yellow;
+            font-weight: 800;
+            font-size: 20px;
+            opacity: 0.8;
+            padding: 9px 18px;
+          }
+        }
+      }
+
+      .arrow-down-after-explor-more-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        gap: 15px;
+
+        .arrow-down-after-explor-more-button-1 {
+          height: 30px;
+        }
+
+        .arrow-down-after-explor-more-button-2 {
+          height: 30px;
+        }
+
+        .arrow-down-after-explor-more-button-3 {
+          height: 30px;
+        }
+
+        .arrow-down-after-explor-more-button-4 {
+          height: 30px;
+        }
+
+        .arrow-down-after-explor-more-button-5 {
+          height: 30px;
+        }
+      }
+
+      // yellow-belt----------------------------------------------------------------------------------
+      .yellow-belt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $dark-yellow;
+
+        .earth-svg {
+          height: 120px;
+        }
+
+        .good-for-nature {
+          font-family: "Modak", cursive;
+          font-size: 45px;
+          font-weight: 100;
+          color: $light-yellow-black;
+        }
+
+        .heart-beat-svg {
+          height: 100px;
+        }
+
+        .low-calories {
+          font-family: "Modak", cursive;
+          font-size: 45px;
+          font-weight: 100;
+          color: $light-yellow-black;
+        }
+      }
+      // find-out-why-our-snacks-container------------------------------------------------------
+      .find-out-why-our-snacks-container-wrapper {
+        position: relative;
+        .find-out-why-our-snacks-container-burger-1 {
+          height: 130px;
+          position: absolute;
+          left: 10%;
+          transform: rotate(-45deg);
+        }
+        .find-out-why-our-snacks-title {
+          text-align: center;
+          font-family: "Modak", cursive;
+          font-size: 55px;
+          font-weight: 100;
+          color: $white;
+          margin-top: 50px;
+          line-height: 50px;
+          text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d,
+            -5px -5px 0 #01816d;
+        }
+        .most-rounded-circle-line-arrow-1 {
+          height: 130px;
+          position: absolute;
+          left: 22%;
+          bottom: 70%;
+        }
+        .find-out-why-our-snacks-sub-title {
+          text-align: center;
+          font-family: "Nunito", sans-serif;
+          font-size: 17px;
+          color: $white;
+          margin-top: 30px;
+        }
+        .most-rounded-circle-line-arrow-2 {
+          height: 130px;
+          position: absolute;
+          right: 22%;
+          bottom: 80%;
+          transform: scale(-1);
+        }
+        .find-out-why-our-snacks-container-burger-2 {
+          height: 130px;
+          position: absolute;
+          right: 10%;
+          bottom: 74%;
+          transform: rotate(35deg);
+        }
+        // why-sneek-play-box---------------------------------------------------------------------
+        .why-sneek-play-box {
+          display: flex;
+          justify-content: space-between;
+          background-color: $grey-board;
+          height: 530px;
+          margin: 65px 125px 0;
+          padding: 50px 50px 25px;
+          position: relative;
+          .scorpio-svg {
+            height: 110px;
+            position: absolute;
+            left: 5%;
+            transform: rotate(25deg);
+          }
+
+          .meat-playbox-svg {
+            height: 150px;
+            position: absolute;
+            left: 17%;
+            bottom: 62%;
+            transform: rotate(-45deg);
+          }
+
+          .burger-playbox-svg {
+            height: 120px;
+            position: absolute;
+            left: 35%;
+            transform: rotate(25deg);
+          }
+
+          .chicken-lolipop-svg {
+            height: 120px;
+            position: absolute;
+            left: 5%;
+            bottom: 50%;
+          }
+
+          .pizza-slice-svg {
+            height: 130px;
+            position: absolute;
+            left: 28%;
+            bottom: 52%;
+          }
+          .chips-cup {
+            height: 500px;
+            width: 470px;
+          }
+
+          .play-button {
+            position: absolute;
+            height: 200px;
+            left: 40%;
+            bottom: 30%;
+          }
+          .why-sneek-title {
+            display: flex;
+            align-items: flex-end;
+            // position: relative;
+            font-size: 80px;
+            font-family: Modak, cursive;
+
+            // top: 220px;
+            h2 {
+              font-weight: 100;
+              line-height: 110px;
+              color: $white;
+              text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d,
+                5px -5px 0 #01816d, -5px -5px 0 #01816d;
+            }
+          }
+        }
+      }
+      // what-they-say-container-wrapper----------------------------------------------
+      .what-they-say-container-wrapper {
+        .what-they-say-container-title {
+          font-size: 70px;
+          font-family: Modak, cursive;
+          font-weight: 100;
+          color: $white;
+        }
+      }
     }
   }
 }

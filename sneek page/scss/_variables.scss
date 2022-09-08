@@ -4,11 +4,13 @@ $dark-yellow: #fdc92e;
 $medium-yellow: #d1bb30;
 $darkest-yellow: #815f00;
 $darkest-mint: #00957b;
+$very-darkest-mint: #01816d;
 $light-yellow-black: #815f00;
+$grey-board: #046151;
 
 @mixin button {
   font-family: "Nunito", sans-serif;
-  padding: 10px 20px;
+  padding: 11px 20px;
   border-radius: 50px;
   margin-top: 60px;
 }
