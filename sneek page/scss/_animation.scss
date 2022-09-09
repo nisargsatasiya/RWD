@@ -1,0 +1,90 @@
+// -----------------------------rotate-center-------------------------------------------------
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+// ------------------------------
+@keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+// --------------------------------arrow-round------------------------------------------------------
+@keyframes arrow-round {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px)
+      rotate(30deg);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px)
+      rotate(30deg);
+  }
+}
+@keyframes arrow-round-2 {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px)
+      rotate(-120deg);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px)
+      rotate(-120deg);
+  }
+}
+// ------------------------------------------chese-------------------------------------
+@keyframes chese-1 {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) scaleX(-1);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0) scaleX(-1);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0) scaleX(-1);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0) scaleX(-1);
+  }
+}
+@keyframes chese-2 {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+// ---------------------------------------------------------------------
+

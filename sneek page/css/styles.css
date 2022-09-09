@@ -1,3 +1,67 @@
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes arrow-round {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px) rotate(30deg);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px) rotate(30deg);
+  }
+}
+@keyframes arrow-round-2 {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px) rotate(-120deg);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px) rotate(-120deg);
+  }
+}
+@keyframes chese-1 {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0) scaleX(-1);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0) scaleX(-1);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0) scaleX(-1);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0) scaleX(-1);
+  }
+}
+@keyframes chese-2 {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +74,7 @@
 
 body {
   background-color: #0cae96;
+  overflow-x: hidden;
 }
 body nav {
   padding: 30px 120px 0;
@@ -21,14 +86,14 @@ body nav .nav-bar-wrapper {
 }
 body nav .nav-bar-wrapper .logo {
   font-family: "Modak", cursive;
-  font-size: 35px;
+  font-size: 32px;
   color: #ffffff;
   cursor: pointer;
 }
 body nav .nav-bar-wrapper .product-text-bottom-line {
   position: absolute;
   height: 60px;
-  top: 70px;
+  top: 77px;
   /* width: 100px; */
   transform: rotate(280deg);
 }
@@ -50,6 +115,7 @@ body nav .nav-bar-wrapper .locat-products-nav-bar {
   font-family: "Nunito", sans-serif;
   color: #ffffff;
   cursor: pointer;
+  font-weight: 400;
 }
 body nav .nav-bar-wrapper .locat-products-nav-bar .fa-location-dot {
   color: #fdc92e;
@@ -58,19 +124,10 @@ body header {
   display: flex;
   padding: 120px 120px 0;
 }
-body header .header-swirl-subtitle {
-  position: absolute;
-  top: 250px;
-}
-body header .patato-chips-images {
-  position: absolute;
-  top: 65px;
-  left: 0;
-  height: 55px;
-}
 body header .header-left-side {
   position: relative;
-  width: 50%;
+  flex: 1;
+  height: 500px;
 }
 body header .header-left-side .header-title {
   position: relative;
@@ -82,12 +139,19 @@ body header .header-left-side .header-title {
   line-height: 80px;
   text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
 }
+body header .header-left-side .header-swirl-subtitle {
+  position: absolute;
+  top: 52%;
+  height: 80px;
+  animation: rotate-center 1s linear infinite;
+}
 body header .header-left-side .header-subtitle {
   position: relative;
   padding: 50px 100px 0;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+  opacity: 0.8;
 }
 body header .header-left-side .header-button-snacking-now {
   position: relative;
@@ -100,6 +164,7 @@ body header .header-left-side .header-button-snacking-now {
   color: #815f00;
   font-weight: 800;
   font-size: 20px;
+  transition: 0.9s ease-in-out;
 }
 body header .header-left-side .header-button-snacking-now:hover {
   cursor: pointer;
@@ -109,7 +174,8 @@ body header .header-left-side .header-button-snacking-now:hover {
   font-weight: 800;
   font-size: 20px;
   opacity: 0.8;
-  padding: 7px 18px;
+  padding: 8px 19px;
+  transition: 0.9s;
 }
 body header .header-left-side .header-button-shop-in-ebay {
   position: relative;
@@ -117,6 +183,7 @@ body header .header-left-side .header-button-shop-in-ebay {
   padding: 11px 20px;
   border-radius: 50px;
   margin-top: 60px;
+  padding: 10px 30px;
   background: transparent;
   border: 2px solid #fdc92e;
   color: #fdc92e;
@@ -124,6 +191,7 @@ body header .header-left-side .header-button-shop-in-ebay {
   font-size: 19px;
   margin-left: 30px;
   opacity: 0.8;
+  transition: 0.9s ease-in-out;
 }
 body header .header-left-side .header-button-shop-in-ebay:hover {
   cursor: pointer;
@@ -133,11 +201,13 @@ body header .header-left-side .header-button-shop-in-ebay:hover {
   font-weight: 700;
   font-size: 19px;
   opacity: 1;
-  padding: 13px 21px;
+  padding: 11px 31px;
+  transition: 0.9s;
 }
 body header .header-right-side {
   position: relative;
-  width: 50%;
+  height: 500px;
+  flex: 1;
 }
 body header .header-right-side .header-dark-mint-circle {
   position: relative;
@@ -156,14 +226,6 @@ body header .header-right-side .header-dark-yellow-circle {
   background-color: #fdc92e;
   border: 5px solid #d1bb30;
 }
-body header .header-right-side .mint-leaf-header {
-  position: relative;
-  height: 150px;
-  width: 100px;
-  bottom: 305px;
-  right: 50px;
-  transform: rotate(-150deg);
-}
 body header .header-right-side .header-chips-packet-image {
   position: absolute;
   top: 25px;
@@ -173,32 +235,60 @@ body header .header-right-side .header-chips-packet-image {
   width: 300px;
   object-fit: cover;
 }
-body header .header-right-side .tomato-header-png {
-  height: 75px;
-  width: 75px;
-  top: 10px;
-  right: 115px;
-  position: absolute;
+body header .header-right-side .wheel-header {
+  animation: rotate-center 5s linear infinite;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  bottom: 500px;
+  right: 5%;
 }
-body header .header-right-side .tomato-slice {
+body header .header-right-side .wheel-header .mint-leaf-header {
+  position: relative;
+  height: 150px;
+  width: 100px;
+  top: 30%;
+  right: 20px;
+  transform: rotate(-150deg);
+  animation: rotate-center 5s linear infinite;
+}
+body header .header-right-side .wheel-header .patato-chips-images {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  height: 50px;
+  animation: rotate-center 5s linear infinite;
+}
+body header .header-right-side .wheel-header .tomato-header-png {
+  height: 100px;
+  width: 100px;
+  top: 0;
+  right: 90px;
+  position: absolute;
+  animation: rotate-center 5s linear infinite;
+}
+body header .header-right-side .wheel-header .tomato-slice {
   position: absolute;
   height: 75px;
   width: 75px;
-  bottom: 170px;
+  bottom: 25px;
   left: 80px;
   transform: rotate(75deg);
+  animation: rotate-center 5s linear infinite;
 }
-body header .header-right-side .three-patato-chips-header {
+body header .header-right-side .wheel-header .three-patato-chips-header {
   position: absolute;
   top: 200px;
-  right: 0px;
+  left: 85%;
   height: 70px;
+  animation: rotate-center 5s linear infinite;
 }
-body header .header-right-side .patato-chips-images-2 {
+body header .header-right-side .wheel-header .patato-chips-images-2 {
   position: absolute;
-  bottom: 200px;
-  right: 100px;
-  height: 45px;
+  bottom: 30px;
+  right: 75px;
+  height: 55px;
+  animation: rotate-center 5s linear infinite;
 }
 body section {
   display: flex;
@@ -216,10 +306,12 @@ body section h3 {
 body section .arrow-down {
   color: #fdc92e;
   height: 80px;
+  cursor: pointer;
 }
 body section .explore-more-section-wrapper {
   background-color: #00957b;
-  border-radius: 120px;
+  border-radius: 120px 120px 0 0;
+  padding-bottom: 200px;
 }
 body section .explore-more-section-wrapper .discover-your-fovorite-flavor-section-wrapper {
   position: relative;
@@ -239,18 +331,21 @@ body section .explore-more-section-wrapper .discover-your-fovorite-flavor-sectio
   height: 200px;
   top: 150px;
   left: 100px;
-  transform: scaleX(-1) rotate(30deg);
+  transform: scaleX(-1);
+  animation: chese-1 2s infinite alternate;
 }
 body section .explore-more-section-wrapper .discover-your-fovorite-flavor-section-wrapper .arrow-round {
   position: absolute;
   top: 230px;
   left: 265px;
   height: 100px;
-  transform: rotate(20deg);
+  transform: rotate(110deg);
+  animation: arrow-round 0.5s infinite alternate;
 }
 body section .explore-more-section-wrapper .discover-your-fovorite-flavor-section-wrapper .discover-your-fovorite-flavor-section-subtitle {
   text-align: center;
   color: #ffffff;
+  opacity: 0.8;
   font-family: "Nunito", sans-serif;
   margin-top: 40px;
   font-size: 17px;
@@ -260,14 +355,14 @@ body section .explore-more-section-wrapper .discover-your-fovorite-flavor-sectio
   top: 280px;
   right: 280px;
   height: 100px;
-  transform: rotate(-110deg);
+  animation: arrow-round-2 0.5s infinite alternate;
 }
 body section .explore-more-section-wrapper .discover-your-fovorite-flavor-section-wrapper .cheese-image-2 {
   position: absolute;
   height: 200px;
   top: 100px;
   right: 50px;
-  transform: scaleX(1) rotate(-30deg);
+  animation: chese-2 2s infinite alternate;
 }
 body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper {
   display: flex;
@@ -287,6 +382,11 @@ body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .s
   object-fit: cover;
   position: relative;
   bottom: 25px;
+  transition: transform 0.2s;
+}
+body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-image-1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-after-yellow-circle {
   height: 300px;
@@ -297,10 +397,15 @@ body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .s
 }
 body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-after-yellow-circle .section-image-2 {
   position: relative;
-  left: 5px;
+  left: 0px;
   bottom: 75px;
   height: 400px;
   width: 290px;
+  transition: transform 0.2s;
+}
+body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-after-yellow-circle .section-image-2:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-image-3 {
   height: 350px;
@@ -308,6 +413,11 @@ body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .s
   object-fit: cover;
   position: relative;
   bottom: 25px;
+  transition: transform 0.2s;
+}
+body section .explore-more-section-wrapper .lays-chips-packets-images-wrapper .section-image-3:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 body section .explore-more-section-wrapper .builing-simple-food-section {
   position: relative;
@@ -350,6 +460,10 @@ body section .explore-more-section-wrapper .builing-simple-food-section .arrow-l
   left: 175px;
   top: 43%;
   color: #007c69;
+  cursor: pointer;
+}
+body section .explore-more-section-wrapper .builing-simple-food-section .arrow-left:hover {
+  background-color: aqua;
 }
 body section .explore-more-section-wrapper .builing-simple-food-section .half-circle-right-side {
   position: absolute;
@@ -363,6 +477,7 @@ body section .explore-more-section-wrapper .builing-simple-food-section .arrow-r
   height: 80px;
   right: 175px;
   top: 43%;
+  cursor: pointer;
 }
 body section .explore-more-section-wrapper .builing-simple-food-section .single-round-arrow-1 {
   position: absolute;
@@ -376,6 +491,7 @@ body section .explore-more-section-wrapper .builing-simple-food-section .builing
   text-align: center;
   font-family: "Nunito", sans-serif;
   color: #ffffff;
+  opacity: 0.8;
   line-height: 22px;
 }
 body section .explore-more-section-wrapper .builing-simple-food-section .single-round-arrow-2 {
@@ -445,6 +561,7 @@ body section .explore-more-section-wrapper .arrow-down-after-explor-more-button-
 }
 body section .explore-more-section-wrapper .arrow-down-after-explor-more-button-wrapper .arrow-down-after-explor-more-button-2 {
   height: 30px;
+  transform: scale(1.2);
 }
 body section .explore-more-section-wrapper .arrow-down-after-explor-more-button-wrapper .arrow-down-after-explor-more-button-3 {
   height: 30px;
@@ -460,15 +577,34 @@ body section .explore-more-section-wrapper .yellow-belt {
   justify-content: space-between;
   align-items: center;
   background-color: #fdc92e;
+  padding: 15px;
 }
 body section .explore-more-section-wrapper .yellow-belt .earth-svg {
   height: 120px;
+}
+body section .explore-more-section-wrapper .yellow-belt .arrow-down-good-for-nature {
+  height: 30px;
+  transition: 0.8s;
+}
+body section .explore-more-section-wrapper .yellow-belt .arrow-down-good-for-nature:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: 0.8s;
 }
 body section .explore-more-section-wrapper .yellow-belt .good-for-nature {
   font-family: "Modak", cursive;
   font-size: 45px;
   font-weight: 100;
   color: #815f00;
+}
+body section .explore-more-section-wrapper .yellow-belt .arrow-down-low-calories {
+  height: 30px;
+  transition: 0.8s;
+}
+body section .explore-more-section-wrapper .yellow-belt .arrow-down-low-calories:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: 0.8s;
 }
 body section .explore-more-section-wrapper .yellow-belt .heart-beat-svg {
   height: 100px;
@@ -501,22 +637,24 @@ body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wr
 body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .most-rounded-circle-line-arrow-1 {
   height: 130px;
   position: absolute;
-  left: 22%;
+  left: 18%;
   bottom: 70%;
+  animation: 0.5s ease 0s infinite alternate none running arrow-round;
 }
 body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .find-out-why-our-snacks-sub-title {
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 17px;
   color: #ffffff;
+  opacity: 0.8;
   margin-top: 30px;
 }
 body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .most-rounded-circle-line-arrow-2 {
   height: 130px;
   position: absolute;
-  right: 22%;
-  bottom: 80%;
-  transform: scale(-1);
+  right: 20%;
+  bottom: 74%;
+  animation: arrow-round-2 0.5s infinite alternate;
 }
 body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .find-out-why-our-snacks-container-burger-2 {
   height: 130px;
@@ -574,6 +712,19 @@ body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wr
   height: 200px;
   left: 40%;
   bottom: 30%;
+  transition: 0.9s;
+}
+body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .why-sneek-play-box .play-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+@keyframes play-button {
+  0% {
+    transition: 0.9s;
+  }
+  50% {
+    transition: 0.9s;
+  }
 }
 body section .explore-more-section-wrapper .find-out-why-our-snacks-container-wrapper .why-sneek-play-box .why-sneek-title {
   display: flex;
@@ -595,6 +746,13 @@ body section .explore-more-section-wrapper .what-they-say-container-wrapper {
   flex-direction: column;
   position: relative;
 }
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-section-scorpio-1 {
+  position: absolute;
+  height: 130px;
+  bottom: 82%;
+  left: 7%;
+  transform: rotate(20deg);
+}
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .what-they-say-container-title {
   text-align: center;
   font-size: 55px;
@@ -604,51 +762,116 @@ body section .explore-more-section-wrapper .what-they-say-container-wrapper .wha
   line-height: 50px;
   text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
 }
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-section-scorpio-2 {
+  position: absolute;
+  height: 130px;
+  bottom: 80%;
+  right: 7%;
+  transform: rotate(-20deg);
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .round-arrow-man-image-1 {
+  position: absolute;
+  height: 120px;
+  left: 17%;
+  bottom: 75%;
+  transform: rotate(110deg);
+  animation: arrow-round 0.5s infinite alternate;
+}
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .what-they-say-container-sub-title {
   margin-top: 30px;
   font-family: "Nunito", sans-serif;
   text-align: center;
   color: #ffffff;
+  opacity: 0.8;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .round-arrow-man-image-2 {
+  position: absolute;
+  height: 120px;
+  right: 20%;
+  bottom: 70%;
+  transform: scale(-1) rotate(40deg);
+  animation: arrow-round-2 0.5s infinite alternate;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .chicken-lolipop-man-image {
+  height: 135px;
+  position: absolute;
+  left: 8%;
+  bottom: 52%;
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .ceo-name {
   margin-top: 50px;
   text-align: center;
   font-family: "Nunito", sans-serif;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 23px;
+  opacity: 0.8;
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .bonge-handsomeman-details {
   margin-top: 10px;
   text-align: center;
   font-family: "Nunito", sans-serif;
   color: #ffffff;
-  font-size: 17px;
+  opacity: 0.8;
+  font-size: 16px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .burger-man-image {
+  height: 135px;
+  position: absolute;
+  right: 8%;
+  bottom: 52%;
+  transform: rotate(-20deg);
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #01816d;
-  height: 220px;
+  height: 250px;
   width: 700px;
   border-radius: 120px;
-  margin-top: 170px;
+  margin-top: 230px;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .meat-1-man-image {
+  position: absolute;
+  height: 145px;
+  bottom: 41%;
+  left: 21%;
+  transform: rotate(-45deg);
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-left-man-image {
   height: 80px;
   position: absolute;
-  left: 12%;
+  left: 10%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-left-man-image:hover {
+  transition: 0.6s;
+  transform: scale(1.3);
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .man-image {
   position: relative;
-  bottom: 35%;
-  height: 374px;
-  width: 300px;
+  bottom: 40%;
+  height: 450px;
+  width: 350px;
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-right-man-image {
   height: 80px;
   position: absolute;
-  right: 12%;
+  right: 10%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .arrow-right-man-image:hover {
+  transition: 0.6s;
+  transform: scale(1.3);
+}
+body section .explore-more-section-wrapper .what-they-say-container-wrapper .man-image-dark-mint-container .meat-2-man-image {
+  position: absolute;
+  height: 145px;
+  bottom: 41%;
+  right: 21%;
+  transform: scale(-1) rotate(-45deg);
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper {
   display: flex;
@@ -660,6 +883,7 @@ body section .explore-more-section-wrapper .what-they-say-container-wrapper .arr
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-2 {
   height: 30px;
+  transform: scale(1.3);
 }
 body section .explore-more-section-wrapper .what-they-say-container-wrapper .arrow-down-man-image-wrapper .arrow-down-man-image-3 {
   height: 30px;
@@ -671,7 +895,11 @@ body section .explore-more-section-wrapper .what-they-say-container-wrapper .arr
   height: 30px;
 }
 body footer {
-  margin-top: 150px;
+  bottom: 100px;
+  position: relative;
+  padding-top: 100px;
+  border-radius: 120px 120px 0 0;
+  background-color: #0daa90;
 }
 body footer .title-and-button-wrapper {
   display: flex;
@@ -679,28 +907,71 @@ body footer .title-and-button-wrapper {
   align-items: center;
   flex-direction: column;
 }
+body footer .title-and-button-wrapper .most-rounded-circle-line-footer-1 {
+  height: 130px;
+  position: absolute;
+  left: 10%;
+  bottom: 60%;
+  animation: arrow-round 0.5s infinite alternate;
+}
 body footer .title-and-button-wrapper .footer-title {
   font-family: Modak, cursive;
   font-size: 55px;
   font-weight: 100;
   color: #ffffff;
-  text-shadow: -5px 5px 0 #01816d, 5px 5px 0 #01816d, 5px -5px 0 #01816d, -5px -5px 0 #01816d;
+  text-shadow: -5px 5px 0 #00836f, 5px 5px 0 #00836f, 5px -5px 0 #00836f, -5px -5px 0 #00836f;
+  line-height: 55px;
 }
-body footer .title-and-button-wrapper .try-now-button-footer {
+body footer .title-and-button-wrapper .most-rounded-circle-line-footer-2 {
+  height: 130px;
+  position: absolute;
+  right: 11%;
+  bottom: 65%;
+  animation: arrow-round-2 0.5s infinite alternate;
+}
+body footer .title-and-button-wrapper .footer-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body footer .title-and-button-wrapper .footer-button-wrapper .footer-y-now-text {
+  border-radius: 100px;
+  border: 0;
+  font-size: 90px;
+  font-weight: 100;
+  font-family: Modak, cusive;
+  margin-top: 90px;
+  color: #01816d;
+  margin-right: 40px;
+}
+body footer .title-and-button-wrapper .footer-button-wrapper .try-now-button-footer {
   font-family: "Nunito", sans-serif;
   padding: 11px 20px;
   border-radius: 50px;
   margin-top: 60px;
   background-color: #fdc92e;
-  padding: 0 100px;
+  padding: 5px 50px;
   border-radius: 100px;
   border: 0;
   color: #815f00;
-  font-size: 120px;
+  font-size: 90px;
   font-weight: 100;
   font-family: Modak, cusive;
+  margin-top: 90px;
+  cursor: pointer;
+}
+body footer .title-and-button-wrapper .footer-button-wrapper .footer-try-no-text {
+  border-radius: 100px;
+  border: 0;
+  font-size: 90px;
+  font-weight: 100;
+  font-family: Modak, cusive;
+  margin-top: 90px;
+  color: #01816d;
+  margin-left: 40px;
 }
 body footer .logo-footer {
+  align-items: center;
   font-family: "Modak", cursive;
   font-size: 55px;
   color: #ffffff;
@@ -710,7 +981,8 @@ body footer .logo-footer {
 body footer .copy-right-section {
   display: flex;
   justify-content: space-between;
-  padding: 20px 100px 20px 100px;
+  align-items: center;
+  padding: 20px 110px 20px 110px;
 }
 body footer .copy-right-section .condition-text-footer {
   font-family: "Nunito", sans-serif;
@@ -724,6 +996,10 @@ body footer .copy-right-section .footer-ul ul li {
   font-family: "Nunito", sans-serif;
   color: #ffffff;
   list-style: none;
+}
+body footer .copy-right-section .footer-ul ul li:hover {
+  color: aquamarine;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
