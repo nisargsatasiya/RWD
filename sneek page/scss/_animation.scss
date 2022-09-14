@@ -9,6 +9,16 @@
     transform: rotate(360deg);
   }
 }
+@keyframes rotate-center-2 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 // ------------------------------
 @keyframes rotate-90-cw {
   0% {

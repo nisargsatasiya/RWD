@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+/* body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--light-grayish-yellow);
+  overflow-x: hidden;
+} */
+
+/* .max-width-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+} */
+
+/*-----------------------------------------navbar -------------------------------------*/
+
+/* nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .logo-main {
+  margin: 40px;
+  cursor: pointer;
+}
+
+.logo-circle {
+  border: 5px solid var(--maximum-red);
+  border-radius: 50%;
+  color: var(--maximum-red);
+  height: 40px;
+  width: 40px;
+  position: relative;
+} */
+
+/* .logo-text {
+  font-weight: 800;
+  position: absolute;
+  left: 9px;
+  top: 12px;
+} */
+
+/* .nav-menu {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.nav-menu ul li {
+  display: inline;
+  margin: 15px;
+  list-style: none;
+  color: gray;
+  cursor: pointer;
+} */
+
+/* .nav-menu-button {
+  padding-left: 80px;
+  cursor: pointer;
+}
+
+.nav-menu ul li:hover {
+  color: black;
+}
+
+.Log-in {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 15px;
+  padding-inline: 22px;
+  font-weight: 600;
+  font-size: 12px;
+  border: 0;
+  cursor: pointer;
+  margin-right: -15px;
+  margin-left: 35px;
+}
+
+.Log-in:hover,
+.Sign-up:hover {
+  background-color: gray;
+}
+
+.Sign-up {
+  color: white;
+  background-color: var(--vermilion);
+  border-radius: 10px;
+  padding: 15px;
+  padding-inline: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  border: 0;
+  cursor: pointer;
+} */
+
+/*-----------------------------------header-------------------------------------- */
+
+/* .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-h1 {
+  font-size: 85px;
+  font-weight: 600;
+  margin-top: 20px;
+  background-image: linear-gradient(90deg, var(--black) 30%, var(--rust) 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: alias;
+}
+
+.header-h4 {
+  font-weight: 500;
+  font-size: 19.5px;
+  color: gray;
+  margin: 15px;
+  position: relative;
+  left: -75px;
+  text-align: center;
+  cursor: alias;
+  width: 1330px;
+  line-height: 35px;
+}
+
+----------------------------------------service-section-1-----------------------------------------------
+
+.Service-section {
+  margin-top: 150px;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-color: var(--maximum-yellow-red);
+}
+
+.Photo-section {
+  position: relative;
+}
+
+.Photo-size {
+  height: 400px;
+  width: 500px;
+  object-fit: cover;
+  position: absolute;
+  left: 80;
+  top: -100px;
+}
+
+.Photo-title {
+  font-family: "Alfa Slab One", cursive;
+  position: absolute;
+  left: 125px;
+  top: 170px;
+  font-size: 50px;
+  color: var(--white);
+  cursor: alias;
+}
+
+.fa-certificate {
+  position: absolute;
+  left: 75px;
+}
+
+.fa.fa-certificate {
+  font-size: 150px;
+}
+
+.fa-certificate {
+  position: absolute;
+  left: 660px;
+  top: 20px;
+}
+
+.Hi-text {
+  font-family: "Alfa Slab One", cursive;
+  position: absolute;
+  font-size: 60px;
+  color: var(--white);
+  right: 438px;
+  top: 65px;
+  cursor: alias;
+}
+
+.service-info {
+  position: relative;
+}
+
+.services-h1-text {
+  position: absolute;
+  top: 160px;
+  font-weight: 600;
+  right: 110px;
+  font-size: 40px;
+  cursor: alias;
+}
+
+.services-h4-text {
+  position: absolute;
+  top: 250px;
+  font-weight: 400;
+  right: 20px;
+  font-size: 13px;
+  color: gray;
+  cursor: alias;
+}
+
+.arrow {
+  position: absolute;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.arrow:hover {
+  background-color: var(--maximum-yellow-red);
+  color: red;
+  border: 2px solid red;
+}
+
+.arrow-right-circle {
+  position: relative;
+  left: 1140px;
+  top: 30px;
+}
+
+.fa-long-arrow-right {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+}
+
+.arrow-left-circle {
+  position: relative;
+  left: 1080px;
+  top: 30px;
+}
+
+.fa-long-arrow-left {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+} */
+
+/* -------------------------------------footer-info------------------------------------- */
+
+footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+footer ul i {
+  align-self: flex-start;
+  padding-top: 30px;
+}
+footer ul li {
+  width: 200px;
+  line-height: 30px;
+}
+footer ul hr {
+  height: 100px;
+}
+footer ul p {
+  color: grey;
+  font-weight: 500;
+}

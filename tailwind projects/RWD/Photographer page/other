@@ -1,0 +1,245 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f1e7;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  margin: 0;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+span:hover,
+p:hover {
+  cursor: alias;
+}
+
+.max-width-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  width: 100%;
+}
+header .nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+header .nav-bar .nav-logo {
+  height: 35px;
+  width: 35px;
+  border: 5px solid #cc4130;
+  border-radius: 30px;
+}
+header .nav-bar .nav-logo a {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  color: #cc4130;
+  position: relative;
+  text-decoration: none;
+  left: 5px;
+  top: 8px;
+}
+header .nav-bar .nav-menu a {
+  text-decoration: none;
+  color: grey;
+  margin: 0;
+  padding: 20px;
+  font-weight: 700;
+}
+header .nav-bar .nav-menu a:hover {
+  color: #181614;
+}
+header .nav-bar .nav-menu .button {
+  padding: 0;
+}
+header .nav-bar .nav-menu button {
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+header .nav-bar .nav-menu button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+header .nav-bar .nav-menu .login-button {
+  background-color: #000000;
+  margin-left: 40px;
+}
+header .nav-bar .nav-menu .signup-button {
+  background-color: #cd412e;
+  margin-left: 10px;
+}
+
+main .heading-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0;
+}
+main .heading-section .title {
+  font-size: 90px;
+  font-weight: 600;
+  background-image: linear-gradient(90deg, #000000 30%, #a23c03 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .heading-section .subtitle {
+  padding-top: 30px;
+  color: grey;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 35px;
+  margin: 0;
+  width: 750px;
+}
+main .service-section {
+  width: 100%;
+  background-color: #ffbd5b;
+  height: 250px;
+  margin-top: 150px;
+  position: relative;
+}
+main .service-section .photo-section {
+  position: absolute;
+  bottom: 0;
+}
+main .service-section .photo-section img {
+  position: absolute;
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+  left: 80px;
+  bottom: 0;
+}
+main .service-section .photo-section h2 {
+  position: absolute;
+  color: #ffffff;
+  left: 100px;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+main .service-section .photo-section .text-im {
+  bottom: 50px;
+}
+main .service-section .photo-section .text-erick {
+  bottom: 10px;
+}
+main .service-section .service-information {
+  width: 650px;
+  position: absolute;
+  left: 630px;
+  top: 20px;
+}
+main .service-section .service-information a {
+  text-decoration: none;
+}
+main .service-section .service-information .arrow {
+  background-color: #000000;
+  color: #ffbd5b;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  position: absolute;
+  border: 2px solid #000000;
+}
+main .service-section .service-information .arrow:hover {
+  background-color: #ffbd5b;
+  color: #e09c4b;
+  border: 2px solid #e09c4b;
+  cursor: pointer;
+}
+main .service-section .service-information .left-arrow {
+  position: absolute;
+  right: 100px;
+}
+main .service-section .service-information .right-arrow {
+  position: absolute;
+  right: 50px;
+}
+main .service-section .service-information .left-arrow i,
+main .service-section .service-information .right-arrow i {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+}
+main .service-section .service-information .fa-certificate {
+  font-size: 120px;
+}
+main .service-section .service-information h2 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  left: 25px;
+  top: 35px;
+}
+main .service-section .service-information h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+main .service-section .service-information p {
+  font-size: 15px;
+  padding-top: 10px;
+  color: #181614;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+footer ul i {
+  align-self: flex-start;
+  padding-top: 30px;
+}
+footer ul li {
+  width: 200px;
+  line-height: 30px;
+}
+footer ul hr {
+  height: 100px;
+}
+footer ul p {
+  color: grey;
+  font-weight: 500;
+}

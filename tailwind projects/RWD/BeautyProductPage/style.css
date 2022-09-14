@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+.white-smoke{
+  --white-smoke: rgb(246, 246, 246);
+}
+@tailwind utilities;
+
+@layer base{
+  html{
+    font-family: 'Poppins', sans-serif;
+  }
+}
