@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .linearGradient{ 
+    @apply block relative mt-[-150px] bg-[linear-gradient(180deg, rgba(0, 0, 0, 0) 6%, #ffffff 53%)] h-[200px] w-full content-[''];
+} */
+
+.linearGradient{
+    @apply block relative mt-[-150px] bg-white h-[200px] w-full content-[''];
+}
